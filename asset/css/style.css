@@ -1,0 +1,2164 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+body::-webkit-scrollbar-track {
+  background: #fff;
+  /* color of the tracking area */
+}
+
+body::-webkit-scrollbar {
+  width: 9px;
+  /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(177, 177, 177, 0.952);
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  /* creates padding around scroll thumb */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#dam-navbar-bye .dam-navbar-logo {
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+@-webkit-keyframes navlogo {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-200px, 0);
+            transform: translate(-200px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes navlogo {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-200px, 0);
+            transform: translate(-200px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes navlist {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(200px, 0);
+            transform: translate(200px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes navlist {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(200px, 0);
+            transform: translate(200px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+.dam-navbar {
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  z-index: 9999;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 96%;
+  padding: 0 2%;
+  height: 80px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.5fr 5fr;
+      grid-template-columns: 1.5fr 5fr;
+  grid-gap: 5%;
+  -webkit-box-shadow: 0 0 5px 3px rgba(146, 146, 146, 0.212);
+          box-shadow: 0 0 5px 3px rgba(146, 146, 146, 0.212);
+}
+
+.dam-navbar .dam-navbar-logo {
+  -webkit-animation: .5s navlogo linear forwards;
+          animation: .5s navlogo linear forwards;
+  opacity: 0;
+  -webkit-transform: translate(-200px, 0);
+          transform: translate(-200px, 0);
+  -webkit-transition: .5s linear;
+  transition: .5s linear;
+  line-height: 80px;
+  color: #3e4a6e;
+  letter-spacing: 3px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dam-navbar .dam-navbar-logo h1 {
+  display: inline-block;
+}
+
+.dam-navbar .dam-navbar-logo small {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dam-navbar .dam-navbar-list {
+  -webkit-animation: .5s navlist linear forwards;
+          animation: .5s navlist linear forwards;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+}
+
+.dam-navbar .dam-navbar-list a {
+  -webkit-animation: 1s menuani linear forwards;
+          animation: 1s menuani linear forwards;
+  cursor: pointer;
+  position: relative;
+  width: 20%;
+  text-align: center;
+  display: inline-block;
+  padding-top: 5px;
+  text-decoration: none;
+  line-height: 80px;
+  font-size: 16px;
+  color: #3e4a6e;
+  font-weight: 400;
+}
+
+.dam-navbar .dam-navbar-list a::before {
+  content: '';
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #3e4a6e;
+}
+
+.dam-navbar .dam-navbar-list a:hover {
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  color: #0066ff;
+}
+
+.dam-navbar .menulist::before {
+  -webkit-animation: .5s menulist linear forwards !important;
+          animation: .5s menulist linear forwards !important;
+}
+
+@-webkit-keyframes menulist {
+  0% {
+    left: 0;
+    width: 0%;
+  }
+  50% {
+    left: 50%;
+    width: 50%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+
+@keyframes menulist {
+  0% {
+    left: 0;
+    width: 0%;
+  }
+  50% {
+    left: 50%;
+    width: 50%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+
+.dam-navbar .dam-navbar-phone {
+  display: none;
+}
+
+.dam-container {
+  -webkit-transition: .0s linear;
+  transition: .0s linear;
+  width: 100%;
+  margin-top: 80px;
+}
+
+.dam-every-section {
+  margin-bottom: 200px;
+}
+
+.dam-heading-profile {
+  position: relative;
+  height: calc(100vh - 80px);
+}
+
+.dam-heading-profile::before {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 80%;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  bottom: 0;
+  height: calc(50vh - 50px);
+  background: #f6c7ff;
+  background: linear-gradient(12deg, #f6c7ff 0%, rgba(147, 174, 255, 0.459821) 53%, #a3ffe8 100%);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+}
+
+.dam-heading-profile .dam-heading-profile-content {
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  position: relative;
+  padding: 40px;
+  text-align: center;
+  background-color: #fff;
+  width: 35%;
+  margin: auto;
+  -webkit-box-shadow: 2px 2px 5px rgba(184, 184, 184, 0.493);
+          box-shadow: 2px 2px 5px rgba(184, 184, 184, 0.493);
+}
+
+.dam-heading-profile .dam-heading-profile-content .dam-heading-profile-content-photo {
+  position: relative;
+}
+
+.dam-heading-profile .dam-heading-profile-content .dam-heading-profile-content-photo::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translate(-50%, 0) scale(1.15) rotate(90deg);
+          transform: translate(-50%, 0) scale(1.15) rotate(90deg);
+  width: 150px;
+  height: 140px;
+  border-radius: 50%;
+  background: #0a66c3;
+  background: -webkit-gradient(linear, left top, right top, color-stop(60%, #0a66c3), color-stop(60%, #c3cfda));
+  background: linear-gradient(90deg, #0a66c3 60%, #c3cfda 60%);
+  z-index: 1;
+}
+
+.dam-heading-profile .dam-heading-profile-content .dam-heading-profile-content-photo::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 150px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.dam-heading-profile .dam-heading-profile-content .dam-heading-profile-content-photo img {
+  z-index: 3;
+  width: 150px;
+  height: 140px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.dam-heading-profile .dam-heading-profile-content h1 {
+  margin-top: 30px;
+  padding-bottom: 15px;
+  font-size: 30px;
+  color: #272e44;
+  border-bottom: 3px solid rgba(62, 74, 110, 0.185);
+}
+
+.dam-heading-profile .dam-heading-profile-content .dam-heading-profile-content-skill-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.dam-heading-profile .dam-heading-profile-content .dam-heading-profile-content-skill-list h2 {
+  font-size: 17px;
+}
+
+.dam-heading-profile .dam-heading-profile-content .dam-heading-profile-content-skill-list h2 i {
+  color: #0066ff;
+}
+
+.dam-heading-profile .dam-heading-profile-content h3 {
+  display: block;
+  margin: 25px auto;
+  width: 80%;
+  border: 2px solid #0066ff;
+  border-radius: 10px;
+  padding: 8px 0;
+  color: #0066ff;
+  font-size: 15px;
+}
+
+.dam-heading-profile .dam-heading-profile-content h3 i {
+  color: #0066ff;
+}
+
+.dam-heading-profile .dam-heading-profile-content .dam-heading-profile-content-link {
+  margin-top: 50px;
+}
+
+.dam-heading-profile .dam-heading-profile-content div {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.dam-heading-profile .dam-heading-profile-content div a {
+  color: #fff;
+  width: 40px;
+  padding: 5px 7px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.dam-heading-profile .dam-heading-profile-content div a:nth-child(1) {
+  background-color: #0068E5;
+}
+
+.dam-heading-profile .dam-heading-profile-content div a:nth-child(2) {
+  background-color: #1AA2F8;
+}
+
+.dam-heading-profile .dam-heading-profile-content div a:nth-child(3) {
+  background-color: #de2d70;
+}
+
+.dam-heading-profile .dam-heading-profile-content div a:nth-child(4) {
+  background-color: #20CE40;
+}
+
+.dam-heading-profile .dam-heading-profile-content div a:nth-child(5) {
+  background-color: #0A66C3;
+}
+
+.dam-heading-profile .dam-heading-profile-content-ani {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+
+.dam-heading-profile .dam-heading-profile-content-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  border-radius: 20px;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+  padding: 8px 5%;
+  -webkit-box-shadow: 0px 0px 5px rgba(184, 184, 184, 0.493);
+          box-shadow: 0px 0px 5px rgba(184, 184, 184, 0.493);
+  color: #0066ff;
+}
+
+.dam-heading-profile .dam-heading-profile-content-label h2 {
+  font-size: 15px;
+}
+
+.dam-heading-profile .dam-heading-profile-content-label h2 i {
+  color: #0066ff;
+  font-size: 16px;
+}
+
+.dam-heading-profile-ani::before {
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  opacity: 1;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+
+.dam-skill-classification {
+  height: 100vh;
+}
+
+.dam-skill-classification .dam-skill-classification-title {
+  opacity: 0;
+  -webkit-transform: translate(0, -200px);
+          transform: translate(0, -200px);
+  position: relative;
+  width: 30%;
+  margin: 5% auto;
+  text-align: center;
+  color: #3e4a6e;
+  padding-bottom: 12px;
+}
+
+.dam-skill-classification .dam-skill-classification-title::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6px;
+  border-radius: 20px;
+  background-color: #3e4a6e;
+}
+
+.dam-skill-classification .dam-skill-classification-group {
+  position: relative;
+  max-width: 90%;
+  overflow: hidden;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 280px 280px;
+      grid-template-rows: 280px 280px;
+}
+
+.dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team {
+  opacity: 0;
+  position: relative;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 40px 20%;
+}
+
+.dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(1) {
+  -webkit-transform: translate(-100px, 0);
+          transform: translate(-100px, 0);
+}
+
+.dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(2) {
+  -webkit-transform: translate(100px, 0);
+          transform: translate(100px, 0);
+}
+
+.dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(3) {
+  -webkit-transform: translate(0, 100px);
+          transform: translate(0, 100px);
+}
+
+.dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(4) {
+  -webkit-transform: translate(100px, 0);
+          transform: translate(100px, 0);
+}
+
+.dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team h1 {
+  margin: 15px 0;
+}
+
+.dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team p {
+  font-size: 15px;
+}
+
+.dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team .dam-skill-classification-label {
+  position: absolute;
+  background-color: #fff;
+  z-index: 5;
+  padding: 10px 3%;
+  -webkit-box-shadow: 0px 0px 5px rgba(184, 184, 184, 0.493);
+          box-shadow: 0px 0px 5px rgba(184, 184, 184, 0.493);
+  color: #0066ff;
+  border-radius: 20px;
+  font-size: 9px;
+}
+
+.dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team .dam-skill-classification-label i {
+  font-size: 17px;
+}
+
+.dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(1) .dam-skill-classification-label, .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(3) .dam-skill-classification-label {
+  top: 0%;
+  left: 0%;
+  -webkit-transform: translate(20%, 50%);
+          transform: translate(20%, 50%);
+}
+
+.dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(2) .dam-skill-classification-label, .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(4) .dam-skill-classification-label {
+  top: 0%;
+  right: 0%;
+  -webkit-transform: translate(-20%, 50%);
+          transform: translate(-20%, 50%);
+}
+
+.dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(3) {
+  border-right: 1px solid rgba(62, 74, 110, 0.37);
+}
+
+.dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(1) {
+  border-right: 1px solid rgba(62, 74, 110, 0.37);
+}
+
+.dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(2) {
+  border-bottom: 1px solid rgba(62, 74, 110, 0.37);
+}
+
+.dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(1) {
+  border-bottom: 1px solid rgba(62, 74, 110, 0.37);
+}
+
+.dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(1) i, .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(4) i {
+  color: #0068E5;
+}
+
+.dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(2) i, .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(3) i {
+  color: #1AA2F8;
+}
+
+.dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team i {
+  font-size: 50px;
+}
+
+.dam-skill-classification .dam-skill-classification-title-ani {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.dam-skill-classification .dam-skill-classification-group-ani .dam-skill-classification-team {
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.dam-skill-classification .dam-skill-classification-group-ani .dam-skill-classification-team:nth-child(1), .dam-skill-classification .dam-skill-classification-group-ani .dam-skill-classification-team:nth-child(2), .dam-skill-classification .dam-skill-classification-group-ani .dam-skill-classification-team:nth-child(3), .dam-skill-classification .dam-skill-classification-group-ani .dam-skill-classification-team:nth-child(4) {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.dam-frequently-tools-used .dam-frequently-tools-used-title {
+  opacity: 0;
+  -webkit-transform: translate(0, -200px);
+          transform: translate(0, -200px);
+  position: relative;
+  width: 30%;
+  margin: 5% auto;
+  text-align: center;
+  color: #3e4a6e;
+  padding-bottom: 12px;
+}
+
+.dam-frequently-tools-used .dam-frequently-tools-used-title::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6px;
+  border-radius: 20px;
+  background-color: #3e4a6e;
+}
+
+.dam-frequently-tools-used .dam-frequently-tools-used-groups {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10%;
+}
+
+.dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-groups-content .dam-frequently-tools-used-group-ani {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group {
+  height: calc(100vh - 80px);
+  position: relative;
+  opacity: 0;
+  -webkit-transform: translate(-200px, 0);
+          transform: translate(-200px, 0);
+}
+
+.dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group::before {
+  content: '';
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 5px;
+  background-color: rgba(0, 102, 255, 0.137);
+}
+
+.dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group .dam-frequently-tools-used-group-link {
+  position: relative;
+  margin-top: 40px;
+  height: 50px;
+  line-height: 45px;
+  padding: 0 3%;
+  font-size: 16px;
+  font-weight: bold;
+  outline: 0;
+  border: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: #0066ff;
+  background-color: #f0f5fc;
+}
+
+.dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group .dam-frequently-tools-used-group-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  width: 2px;
+  background-color: #0066ff;
+}
+
+.dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group .dam-frequently-tools-used-group-link i {
+  font-size: 8px;
+  display: inline-block;
+  margin-right: 3.5px;
+  margin-left: 3.5px;
+}
+
+.dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group i {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group h1, .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group i {
+  color: #0066ff;
+}
+
+.dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group h2 {
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+
+.dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group p {
+  color: #3e4a6e;
+}
+
+.dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-image .dam-frequently-tools-used-image-real {
+  -webkit-transition: .15s ease;
+  transition: .15s ease;
+  opacity: 0;
+  -webkit-transform: translate(-100px, -100px);
+          transform: translate(-100px, -100px);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 120px;
+  width: 100%;
+  -webkit-box-shadow: 5px 5px 20px #cecece;
+          box-shadow: 5px 5px 20px #cecece;
+}
+
+.dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-image .dam-frequently-tools-used-image-reveal {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.dam-frequently-tools-used .dam-frequently-tools-used-title-ani {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.dam-my-works {
+  background-color: #0066ff;
+  padding: 25px 0 50px 0;
+  color: #fff;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.dam-my-works .dam-my-works-title {
+  -webkit-transform: translate(-100px, 0);
+          transform: translate(-100px, 0);
+  opacity: 0;
+  position: relative;
+  width: 30%;
+  margin: 5% auto;
+  text-align: center;
+  padding-bottom: 12px;
+}
+
+.dam-my-works .dam-my-works-title::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.dam-my-works .dam-my-works-title-ani {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.dam-my-works .dam-my-works-group {
+  width: 80%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  text-align: center;
+}
+
+.dam-my-works .dam-my-works-group .dam-my-works-groups {
+  opacity: 0;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom: 150px;
+  color: #0066ff;
+}
+
+.dam-my-works .dam-my-works-group .dam-my-works-groups:nth-child(1) {
+  -webkit-transform: translate(-200px, 0);
+          transform: translate(-200px, 0);
+}
+
+.dam-my-works .dam-my-works-group .dam-my-works-groups:nth-child(2) {
+  -webkit-transform: translate(200px, 0);
+          transform: translate(200px, 0);
+}
+
+.dam-my-works .dam-my-works-group .dam-my-works-groups:nth-child(3) {
+  -webkit-transform: translate(-200px, 0);
+          transform: translate(-200px, 0);
+}
+
+.dam-my-works .dam-my-works-group .dam-my-works-groups:nth-child(4) {
+  -webkit-transform: translate(200px, 0);
+          transform: translate(200px, 0);
+}
+
+.dam-my-works .dam-my-works-group .dam-my-works-groups h1 {
+  margin-bottom: 40px;
+}
+
+.dam-my-works .dam-my-works-group .dam-my-works-groups .dam-my-works-groups-a {
+  padding: 40px 5%;
+  border-radius: 10px;
+  background-color: #fff;
+  border-top: 10px solid #d1e1f8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.dam-my-works .dam-my-works-group .dam-my-works-groups .dam-my-works-groups-content .dam-my-works-groups-content-img img {
+  width: 80%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.dam-my-works .dam-my-works-group .dam-my-works-groups .dam-my-works-groups-content .dam-my-works-groups-content-text .dam-my-works-groups-content-text-rating {
+  margin: 30px 0 15px 0;
+}
+
+.dam-my-works .dam-my-works-group .dam-my-works-groups .dam-my-works-groups-content .dam-my-works-groups-content-text .dam-my-works-groups-content-text-rating i {
+  display: inline-block;
+  margin: 0 5px;
+  border-radius: 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 25px;
+}
+
+.dam-my-works .dam-my-works-group .dam-my-works-groups .dam-my-works-groups-content .dam-my-works-groups-content-text h2 {
+  color: #0066ff;
+  background-color: #f0f5fc;
+  display: block;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 20px;
+  width: 75%;
+  font-size: 15px;
+  margin: 10px auto;
+}
+
+.dam-my-works .dam-my-works-group .dam-my-works-groups .dam-my-works-groups-content .dam-my-works-groups-content-text b {
+  color: #3e4a6e;
+}
+
+.dam-my-works .dam-my-works-group .dam-my-works-groups .dam-my-works-groups-content .dam-my-works-groups-content-text .full-circle {
+  background: #0166ff;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #0166ff), color-stop(50%, #0166ff));
+  background: linear-gradient(90deg, #0166ff 50%, #0166ff 50%);
+}
+
+.dam-my-works .dam-my-works-group .dam-my-works-groups .dam-my-works-groups-content .dam-my-works-groups-content-text .half-circle {
+  background: #0166ff;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #0166ff), color-stop(50%, #d9e8ff));
+  background: linear-gradient(90deg, #0166ff 50%, #d9e8ff 50%);
+}
+
+.dam-my-works .dam-my-works-group .dam-my-works-groups .dam-my-works-groups-content .dam-my-works-groups-content-text .zero-circle {
+  background: #d9e8ff;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #d9e8ff), color-stop(50%, #d9e8ff));
+  background: linear-gradient(90deg, #d9e8ff 50%, #d9e8ff 50%);
+}
+
+.dam-my-works .dam-my-works-group .dam-my-works-groups-ani {
+  opacity: 1;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+
+.dam-my-works .dam-my-works-group .dam-my-works-groups-ani:nth-child(1), .dam-my-works .dam-my-works-group .dam-my-works-groups-ani:nth-child(2), .dam-my-works .dam-my-works-group .dam-my-works-groups-ani:nth-child(3), .dam-my-works .dam-my-works-group .dam-my-works-groups-ani:nth-child(4) {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.dam-my-hobby {
+  overflow: hidden;
+}
+
+.dam-my-hobby .dam-my-hobby-title {
+  opacity: 0;
+  -webkit-transform: translate(200px, 0);
+          transform: translate(200px, 0);
+  position: relative;
+  width: 30%;
+  margin: 5% auto;
+  text-align: center;
+  color: #3e4a6e;
+  padding-bottom: 12px;
+}
+
+.dam-my-hobby .dam-my-hobby-title::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6px;
+  border-radius: 20px;
+  background-color: #3e4a6e;
+}
+
+.dam-my-hobby .dam-my-hobby-title-ani {
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.dam-my-hobby .dam-my-hobby-group {
+  width: 80%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.5fr;
+      grid-template-columns: 1fr 1.5fr;
+  grid-gap: 10%;
+}
+
+.dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content-text {
+  opacity: 0;
+  -webkit-transform: translate(0, -200px);
+          transform: translate(0, -200px);
+}
+
+.dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content-text span {
+  color: #0066ff;
+}
+
+.dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content-text h1 {
+  line-height: 40px;
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: 21px;
+  margin-bottom: 40px;
+  color: #3e4a6e;
+}
+
+.dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content-text button {
+  float: right;
+  position: relative;
+  width: 75%;
+  text-align: center;
+  height: 50px;
+  line-height: 45px;
+  padding: 0 3%;
+  font-size: 16px;
+  font-weight: bold;
+  outline: 0;
+  border: 0;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  color: #0066ff;
+  background-color: #f0f5fc;
+}
+
+.dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content-text button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  overflow: auto;
+  width: 3px;
+  background-color: #0066ff;
+}
+
+.dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content-text div {
+  width: 100px;
+  margin: auto;
+  background: #d9e8ff;
+  padding: 20px 0;
+  border-radius: 50%;
+}
+
+.dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content-text div i {
+  display: block;
+  text-align: center;
+  padding-left: 7px;
+  font-size: 50px;
+  color: #0066ff;
+}
+
+.dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content-text-ani {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+
+.dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content {
+  opacity: 0;
+  -webkit-transform: translate(200px, 0);
+          transform: translate(200px, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-content-1 div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr;
+      grid-template-columns: 1fr 5fr;
+}
+
+.dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents {
+  width: 45%;
+  position: relative;
+}
+
+.dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents:nth-child(1) div {
+  top: 0;
+  -webkit-transform: translate(-50px, -25px);
+          transform: translate(-50px, -25px);
+}
+
+.dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents:nth-child(2) div {
+  right: 0;
+  top: 0;
+  -webkit-transform: translate(100px, 15px);
+          transform: translate(100px, 15px);
+}
+
+.dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents:nth-child(3) div {
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(100px, 15px);
+          transform: translate(100px, 15px);
+}
+
+.dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents div {
+  position: absolute;
+  width: 80%;
+  z-index: 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr;
+      grid-template-columns: 1fr 5fr;
+  grid-gap: 3%;
+  padding: 10px 5%;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 4px 2px rgba(230, 230, 230, 0.836);
+          box-shadow: 2px 2px 4px 2px rgba(230, 230, 230, 0.836);
+  background-color: #fff;
+}
+
+.dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents div h2 {
+  font-size: 15px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #0066ff;
+}
+
+.dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents div i {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 20px;
+  margin-right: 5px;
+  color: #0066ff;
+}
+
+.dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content-ani {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+
+.dam-my-purpose .dam-my-purpose-content {
+  opacity: 0;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.dam-my-purpose .dam-my-purpose-content h1 {
+  font-size: 50px;
+  color: #3e4a6e;
+}
+
+.dam-my-purpose .dam-my-purpose-content p {
+  font-size: 20px;
+  color: rgba(62, 74, 110, 0.616);
+  font-weight: bold;
+}
+
+.dam-my-purpose .dam-my-purpose-content div {
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.dam-my-purpose .dam-my-purpose-content div i {
+  color: #0066ff;
+  font-size: 50px;
+  width: 18%;
+}
+
+.dam-my-purpose .dam-my-purpose-content-ani {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+
+.dam-footer {
+  margin-top: 5%;
+  padding: 3% 3%;
+  background-color: rgba(62, 74, 110, 0.048);
+}
+
+.dam-footer .dam-footer-content {
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+}
+
+.dam-footer .dam-footer-content div {
+  text-align: left;
+}
+
+.dam-footer .dam-footer-content div h2 {
+  font-size: 15px;
+  color: #3e4a6e;
+  margin-bottom: 10px;
+}
+
+.dam-footer .dam-footer-content div .mitsuketa {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 10fr;
+      grid-template-columns: 1fr 10fr;
+  -ms-grid-rows: 29px;
+      grid-template-rows: 29px;
+}
+
+.dam-footer .dam-footer-content div .mitsuketa i, .dam-footer .dam-footer-content div .mitsuketa p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.dam-footer .dam-footer-content div .mitsuketa i {
+  font-size: 17px;
+}
+
+.dam-footer .dam-footer-content div a, .dam-footer .dam-footer-content div p {
+  font-size: 15px;
+  color: rgba(62, 74, 110, 0.856);
+  text-decoration: none;
+  padding: 10px 0;
+  display: block;
+}
+
+.dam-footer .dam-footer-content div i {
+  width: 30px;
+  display: inline-block;
+}
+
+@media (min-width: 1440px) {
+  .dam-heading-profile {
+    max-width: 1440px;
+    margin: auto;
+  }
+  .dam-skill-classification {
+    max-width: 1440px;
+    margin: auto;
+  }
+  .dam-frequently-tools-used {
+    max-width: 1440px;
+    margin: auto;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group {
+    height: calc(80vh - 80px);
+  }
+  .dam-my-works {
+    max-width: 1440px;
+    margin: auto;
+  }
+  .dam-my-hobby {
+    width: 1440px;
+    margin: auto;
+  }
+  .dam-my-purpose {
+    max-width: 1440px;
+    margin: 200px auto;
+  }
+  .dam-my-purpose .dam-my-purpose-content {
+    width: 80%;
+    margin: auto;
+  }
+  .dam-my-purpose .dam-my-purpose-content h1 {
+    font-size: 55px;
+  }
+  .dam-my-purpose .dam-my-purpose-content p {
+    font-size: 35px;
+  }
+  .dam-my-purpose .dam-my-purpose-content div i {
+    font-size: 55px;
+  }
+  .dam-footer {
+    margin: auto;
+    max-width: 1440px;
+    padding: 20px 3%;
+  }
+  .dam-footer .dam-footer-content {
+    width: 90%;
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+  }
+  .dam-footer .dam-footer-content div {
+    margin-bottom: 20px;
+  }
+  .dam-footer .dam-footer-content div h2 {
+    font-size: 15px;
+  }
+  .dam-footer .dam-footer-content div a, .dam-footer .dam-footer-content div p {
+    font-size: 15px;
+  }
+  .dam-footer .dam-footer-content div:nth-child(odd) {
+    margin-right: 20%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .dam-navbar {
+    width: 96%;
+    padding: 0 4%;
+    -ms-grid-columns: 1.5fr 5fr;
+        grid-template-columns: 1.5fr 5fr;
+  }
+  .dam-navbar .dam-navbar-list a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .dam-navbar {
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+  }
+  .dam-navbar .dam-navbar-logo h1 {
+    font-size: 24px;
+  }
+  .dam-navbar .dam-navbar-logo small {
+    font-size: 16px;
+  }
+  .dam-navbar .dam-navbar-list {
+    display: none;
+  }
+  .dam-navbar .dam-navbar-phone {
+    margin-right: 5%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    display: block;
+  }
+  .dam-navbar .dam-navbar-phone i {
+    color: #3e4a6e;
+    font-size: 30px;
+  }
+  .dam-heading-profile {
+    position: relative;
+  }
+  .dam-heading-profile::before {
+    width: 90%;
+  }
+  .dam-heading-profile .dam-heading-profile-content {
+    width: 35%;
+  }
+  .dam-heading-profile .dam-heading-profile-content .dam-heading-profile-content-photo::before {
+    width: 135px;
+    height: 125px;
+  }
+  .dam-heading-profile .dam-heading-profile-content .dam-heading-profile-content-photo::after {
+    width: 135px;
+  }
+  .dam-heading-profile .dam-heading-profile-content .dam-heading-profile-content-photo img {
+    width: 135px;
+    height: 125px;
+  }
+  .dam-heading-profile .dam-heading-profile-content h1 {
+    margin-top: 30px;
+    padding-bottom: 15px;
+    font-size: 25px;
+  }
+  .dam-heading-profile .dam-heading-profile-content .dam-heading-profile-content-skill-list h2 {
+    font-size: 14px;
+  }
+  .dam-heading-profile .dam-heading-profile-content h3 {
+    width: 90%;
+    padding: 8px 0;
+    font-size: 12px;
+  }
+  .dam-heading-profile .dam-heading-profile-content div {
+    margin-top: 20px;
+  }
+  .dam-heading-profile .dam-heading-profile-content div a {
+    width: 40px;
+    padding: 7px 5px;
+    font-size: 20px;
+  }
+  .dam-heading-profile .dam-heading-profile-content-label {
+    padding: 8px 5%;
+  }
+  .dam-heading-profile .dam-heading-profile-content-label h2 {
+    font-size: 13px;
+  }
+  .dam-heading-profile .dam-heading-profile-content-label h2 i {
+    font-size: 16px;
+  }
+  .dam-skill-classification {
+    height: 100vh;
+  }
+  .dam-skill-classification .dam-skill-classification-title {
+    position: relative;
+    width: 50%;
+    margin: 5% auto;
+    text-align: center;
+    color: #3e4a6e;
+    padding-bottom: 12px;
+  }
+  .dam-skill-classification .dam-skill-classification-title::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 6px;
+    border-radius: 20px;
+    background-color: #3e4a6e;
+  }
+  .dam-skill-classification .dam-skill-classification-group {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 280px 280px;
+        grid-template-rows: 280px 280px;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team {
+    position: relative;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 40px 20%;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team h1 {
+    margin: 15px 0;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team p {
+    font-size: 13px;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team .dam-skill-classification-label {
+    position: absolute;
+    background-color: #fff;
+    z-index: 5;
+    padding: 10px 3%;
+    -webkit-box-shadow: 0px 0px 5px rgba(184, 184, 184, 0.493);
+            box-shadow: 0px 0px 5px rgba(184, 184, 184, 0.493);
+    color: #0066ff;
+    border-radius: 20px;
+    font-size: 8px;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team .dam-skill-classification-label i {
+    font-size: 14px;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team h1 {
+    font-size: 20px;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team i {
+    font-size: 40px;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-title {
+    width: 50%;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups {
+    width: 80%;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group .dam-frequently-tools-used-group-link {
+    position: relative;
+    margin-top: 40px;
+    height: 40px;
+    line-height: 35px;
+    padding: 0 5%;
+    font-size: 14px;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group .dam-frequently-tools-used-group-link i {
+    font-size: 8px;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group i {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group p {
+    font-size: 15px;
+  }
+  .dam-my-works .dam-my-works-title {
+    width: 50%;
+    margin: 5% auto;
+  }
+  .dam-my-works .dam-my-works-group {
+    width: 90%;
+  }
+  .dam-my-works .dam-my-works-group .dam-my-works-groups {
+    margin-right: 8%;
+    margin-left: 8%;
+  }
+  .dam-my-works .dam-my-works-group .dam-my-works-groups .dam-my-works-groups-a {
+    padding: 30px 3%;
+  }
+  .dam-my-works .dam-my-works-group .dam-my-works-groups .dam-my-works-groups-content .dam-my-works-groups-content-text h2 {
+    font-size: 15px;
+  }
+  .dam-my-hobby .dam-my-hobby-title {
+    width: 40%;
+  }
+  .dam-my-hobby .dam-my-hobby-group {
+    width: 80%;
+    padding-top: 50px;
+    margin: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1.5fr;
+        grid-template-columns: 1fr 1.5fr;
+    grid-gap: 10%;
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content-text h1 {
+    font-size: 17px;
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content-text button {
+    font-size: 14px;
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents:nth-child(1) div {
+    top: 0;
+    -webkit-transform: translate(-50px, -25px);
+            transform: translate(-50px, -25px);
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents:nth-child(2) div {
+    right: 0;
+    top: 0;
+    -webkit-transform: translate(30px, 15px);
+            transform: translate(30px, 15px);
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents:nth-child(3) div {
+    right: 0;
+    bottom: 0;
+    -webkit-transform: translate(40px, 15px);
+            transform: translate(40px, 15px);
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents div h2 {
+    font-size: 12px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    color: #0066ff;
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents div i {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-size: 17px;
+    margin-right: 5px;
+    color: #0066ff;
+  }
+  .dam-my-purpose .dam-my-purpose-content {
+    width: 80%;
+    margin: auto;
+  }
+  .dam-my-purpose .dam-my-purpose-content h1 {
+    font-size: 40px;
+  }
+  .dam-my-purpose .dam-my-purpose-content p {
+    font-size: 25px;
+  }
+  .dam-my-purpose .dam-my-purpose-content div i {
+    font-size: 40px;
+  }
+  .dam-footer {
+    padding: 20px 3%;
+  }
+  .dam-footer .dam-footer-content {
+    width: 90%;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  .dam-footer .dam-footer-content div {
+    margin-bottom: 40px;
+  }
+  .dam-footer .dam-footer-content div h2 {
+    font-size: 14px;
+  }
+  .dam-footer .dam-footer-content div a, .dam-footer .dam-footer-content div p {
+    font-size: 14px;
+  }
+  .dam-footer .dam-footer-content div:nth-child(odd) {
+    margin-right: 20%;
+  }
+}
+
+@media (max-width: 770px) {
+  .dam-heading-profile::before {
+    width: 94%;
+  }
+  .dam-heading-profile .dam-heading-profile-content {
+    padding: 30px 40px;
+    width: 40%;
+  }
+  .dam-heading-profile .dam-heading-profile-content .dam-heading-profile-content-photo::before {
+    width: 120px;
+    height: 110px;
+  }
+  .dam-heading-profile .dam-heading-profile-content .dam-heading-profile-content-photo::after {
+    width: 120px;
+    height: 110px;
+  }
+  .dam-heading-profile .dam-heading-profile-content .dam-heading-profile-content-photo img {
+    width: 120px;
+    height: 110px;
+  }
+  .dam-heading-profile .dam-heading-profile-content h1 {
+    margin-top: 30px;
+    padding-bottom: 15px;
+    font-size: 20px;
+  }
+  .dam-heading-profile .dam-heading-profile-content .dam-heading-profile-content-skill-list h2 {
+    font-size: 12px;
+  }
+  .dam-heading-profile .dam-heading-profile-content h3 {
+    margin: 20px auto;
+    width: 90%;
+    font-size: 11px;
+  }
+  .dam-heading-profile .dam-heading-profile-content div {
+    margin-top: 20px;
+  }
+  .dam-heading-profile .dam-heading-profile-content div a {
+    width: 40px;
+    padding: 7px 2px;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .dam-heading-profile .dam-heading-profile-content-label {
+    padding: 8px 5%;
+  }
+  .dam-heading-profile .dam-heading-profile-content-label h2 {
+    font-size: 11px;
+  }
+  .dam-heading-profile .dam-heading-profile-content-label h2 i {
+    font-size: 16px;
+  }
+  .dam-skill-classification {
+    height: 100vh;
+  }
+  .dam-skill-classification .dam-skill-classification-title {
+    position: relative;
+    width: 70%;
+    margin: 5% auto;
+    text-align: center;
+    color: #3e4a6e;
+    padding-bottom: 12px;
+  }
+  .dam-skill-classification .dam-skill-classification-title::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 6px;
+    border-radius: 20px;
+    background-color: #3e4a6e;
+  }
+  .dam-skill-classification .dam-skill-classification-group {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 280px 280px;
+        grid-template-rows: 280px 280px;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team {
+    position: relative;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 40px 20%;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team h1 {
+    margin: 15px 0;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team p {
+    font-size: 11px;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team .dam-skill-classification-label {
+    position: absolute;
+    background-color: #fff;
+    z-index: 5;
+    padding: 10px 3%;
+    -webkit-box-shadow: 0px 0px 5px rgba(184, 184, 184, 0.493);
+            box-shadow: 0px 0px 5px rgba(184, 184, 184, 0.493);
+    color: #0066ff;
+    border-radius: 20px;
+    font-size: 7px;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team .dam-skill-classification-label i {
+    font-size: 13px;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(1) .dam-skill-classification-label, .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(3) .dam-skill-classification-label {
+    top: 0%;
+    left: 0%;
+    -webkit-transform: translate(20%, 15%);
+            transform: translate(20%, 15%);
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(2) .dam-skill-classification-label, .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(4) .dam-skill-classification-label {
+    top: 0%;
+    right: 0%;
+    -webkit-transform: translate(-20%, 15%);
+            transform: translate(-20%, 15%);
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team h1 {
+    font-size: 17px;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team i {
+    font-size: 30px;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-title {
+    width: 70%;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups {
+    width: 90%;
+    margin: 50px auto;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group::before {
+    bottom: 15%;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group .dam-frequently-tools-used-group-link {
+    padding: 0 5%;
+    font-size: 12px;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group .dam-frequently-tools-used-group-link i {
+    font-size: 6px;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group h2 {
+    font-size: 17px;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group p {
+    font-size: 12px;
+  }
+  .dam-my-works .dam-my-works-title {
+    width: 60%;
+    margin: 5% auto;
+  }
+  .dam-my-works .dam-my-works-group {
+    width: 96%;
+    margin: auto;
+  }
+  .dam-my-works .dam-my-works-group .dam-my-works-groups {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  .dam-my-works .dam-my-works-group .dam-my-works-groups h1 {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .dam-my-works .dam-my-works-group .dam-my-works-groups .dam-my-works-groups-a {
+    padding: 30px 3%;
+  }
+  .dam-my-works .dam-my-works-group .dam-my-works-groups .dam-my-works-groups-content .dam-my-works-groups-content-text .dam-my-works-groups-content-text-rating i {
+    font-size: 18px;
+  }
+  .dam-my-works .dam-my-works-group .dam-my-works-groups .dam-my-works-groups-content .dam-my-works-groups-content-text h2 {
+    font-size: 12px;
+  }
+  .dam-my-works .dam-my-works-group .dam-my-works-groups .dam-my-works-groups-content .dam-my-works-groups-content-text b {
+    font-size: 13px;
+  }
+  .dam-my-hobby .dam-my-hobby-title {
+    width: 50%;
+  }
+  .dam-my-hobby .dam-my-hobby-group {
+    width: 90%;
+    padding-top: 50px;
+    margin: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1.2fr 1.5fr;
+        grid-template-columns: 1.2fr 1.5fr;
+    grid-gap: 10%;
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content-text h1 {
+    font-size: 13px;
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content-text button {
+    font-size: 12px;
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content-text div {
+    width: 60px;
+    margin: auto;
+    background: #d9e8ff;
+    padding: 15px 0;
+    border-radius: 50%;
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content-text div i {
+    display: block;
+    text-align: center;
+    padding-left: 5px;
+    font-size: 25px;
+    color: #0066ff;
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content {
+    display: block;
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents {
+    width: 70%;
+    margin: auto;
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents:nth-child(1) div {
+    top: 0;
+    -webkit-transform: translate(-50px, -25px);
+            transform: translate(-50px, -25px);
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents:nth-child(2) div {
+    right: 0;
+    top: 0;
+    -webkit-transform: translate(30px, 15px);
+            transform: translate(30px, 15px);
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents:nth-child(3) div {
+    right: 0;
+    bottom: 0;
+    -webkit-transform: translate(40px, 15px);
+            transform: translate(40px, 15px);
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents div h2 {
+    font-size: 10px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    color: #0066ff;
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents div i {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-size: 15px;
+    margin-right: 5px;
+    color: #0066ff;
+  }
+  .dam-my-purpose .dam-my-purpose-content {
+    width: 80%;
+    margin: auto;
+  }
+  .dam-my-purpose .dam-my-purpose-content h1 {
+    font-size: 35px;
+  }
+  .dam-my-purpose .dam-my-purpose-content p {
+    font-size: 20px;
+  }
+  .dam-my-purpose .dam-my-purpose-content div i {
+    font-size: 35px;
+  }
+  .dam-footer {
+    padding: 20px 3%;
+  }
+  .dam-footer .dam-footer-content {
+    width: 96%;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .dam-footer .dam-footer-content div {
+    margin-bottom: 40px;
+  }
+  .dam-footer .dam-footer-content div h2 {
+    font-size: 14px;
+  }
+  .dam-footer .dam-footer-content div a, .dam-footer .dam-footer-content div p {
+    font-size: 14px;
+  }
+  .dam-footer .dam-footer-content div:nth-child(odd) {
+    margin-right: 20%;
+  }
+}
+
+@media (max-width: 600px) {
+  .dam-every-section {
+    margin-bottom: 100px;
+  }
+  .dam-heading-profile::before {
+    width: 94%;
+    height: calc(50vh - 50px);
+  }
+  .dam-heading-profile .dam-heading-profile-content {
+    padding: 30px 0px;
+    width: 70%;
+  }
+  .dam-heading-profile .dam-heading-profile-content .dam-heading-profile-content-photo::before {
+    left: 50%;
+    width: 105px;
+    height: 95px;
+  }
+  .dam-heading-profile .dam-heading-profile-content .dam-heading-profile-content-photo::after {
+    width: 105px;
+    height: 95px;
+  }
+  .dam-heading-profile .dam-heading-profile-content .dam-heading-profile-content-photo img {
+    width: 105px;
+    height: 95px;
+  }
+  .dam-heading-profile .dam-heading-profile-content h1 {
+    margin-top: 30px;
+    padding-bottom: 15px;
+    font-size: 17px;
+  }
+  .dam-heading-profile .dam-heading-profile-content .dam-heading-profile-content-skill-list h2 {
+    font-size: 11px;
+  }
+  .dam-heading-profile .dam-heading-profile-content h3 {
+    margin: 20px auto;
+    width: 90%;
+    font-size: 11px;
+  }
+  .dam-heading-profile .dam-heading-profile-content div {
+    margin-top: 20px;
+  }
+  .dam-heading-profile .dam-heading-profile-content div a {
+    width: 40px;
+    padding: 7px 2px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-right: 2.5px;
+    margin-left: 2.5px;
+  }
+  .dam-heading-profile .dam-heading-profile-content-label {
+    padding: 8px 5%;
+  }
+  .dam-heading-profile .dam-heading-profile-content-label h2 {
+    font-size: 10px;
+  }
+  .dam-skill-classification {
+    height: auto;
+  }
+  .dam-skill-classification .dam-skill-classification-title {
+    position: relative;
+    width: 80%;
+    margin: 5% auto;
+    text-align: center;
+    color: #3e4a6e;
+    padding-bottom: 12px;
+  }
+  .dam-skill-classification .dam-skill-classification-title::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 6px;
+    border-radius: 20px;
+    background-color: #3e4a6e;
+  }
+  .dam-skill-classification .dam-skill-classification-group {
+    position: relative;
+    width: 90%;
+    margin: 35px auto;
+    display: block;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team {
+    position: relative;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 40px 20%;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team h1 {
+    margin: 15px 0;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team p {
+    font-size: 11px;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team .dam-skill-classification-label {
+    position: absolute;
+    background-color: #fff;
+    z-index: 5;
+    padding: 10px 3%;
+    -webkit-box-shadow: 0px 0px 5px rgba(184, 184, 184, 0.493);
+            box-shadow: 0px 0px 5px rgba(184, 184, 184, 0.493);
+    color: #0066ff;
+    border-radius: 20px;
+    font-size: 7px;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team .dam-skill-classification-label i {
+    font-size: 13px;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(1) .dam-skill-classification-label, .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(3) .dam-skill-classification-label {
+    top: 0%;
+    left: 0%;
+    -webkit-transform: translate(20%, 15%);
+            transform: translate(20%, 15%);
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(2) .dam-skill-classification-label, .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(4) .dam-skill-classification-label {
+    top: 0%;
+    right: 0%;
+    -webkit-transform: translate(-20%, 15%);
+            transform: translate(-20%, 15%);
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(3) {
+    border-right: none;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(1) {
+    border-right: none;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(2) {
+    border-bottom: none;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team:nth-child(1) {
+    border-bottom: none;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team h1 {
+    font-size: 17px;
+  }
+  .dam-skill-classification .dam-skill-classification-group .dam-skill-classification-team i {
+    font-size: 30px;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-title {
+    width: 80%;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups {
+    width: 90%;
+    -ms-grid-columns: 1.7fr 1.2fr;
+        grid-template-columns: 1.7fr 1.2fr;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group {
+    padding-bottom: 75px;
+    height: calc(80vh - 80px);
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group::before {
+    display: none;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group .dam-frequently-tools-used-group-link {
+    margin-top: 30px;
+    height: 35px;
+    line-height: 30px;
+    padding: 0 10%;
+    font-size: 10px;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group .dam-frequently-tools-used-group-link::before {
+    bottom: 0;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group .dam-frequently-tools-used-group-link i {
+    display: none;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group i {
+    font-size: 25px;
+    margin-bottom: 12px;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group h1, .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group i {
+    font-size: 18px;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group h2 {
+    margin-bottom: 15px;
+    font-size: 15px;
+  }
+  .dam-frequently-tools-used .dam-frequently-tools-used-groups .dam-frequently-tools-used-group p {
+    font-size: 10px;
+  }
+  .dam-my-works .dam-my-works-title {
+    width: 80%;
+    margin: 5% auto;
+  }
+  .dam-my-works .dam-my-works-group {
+    width: 90%;
+    margin: 50px auto;
+    display: block;
+  }
+  .dam-my-works .dam-my-works-group .dam-my-works-groups {
+    margin-bottom: 50px;
+  }
+  .dam-my-works .dam-my-works-group .dam-my-works-groups:nth-child(2) {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .dam-my-works .dam-my-works-group .dam-my-works-groups:nth-child(3) {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .dam-my-works .dam-my-works-group .dam-my-works-groups:nth-child(4) {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .dam-my-hobby .dam-my-hobby-title {
+    width: 60%;
+  }
+  .dam-my-hobby .dam-my-hobby-group {
+    width: 90%;
+    padding-top: 25px;
+    margin: auto;
+    display: block;
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content-text h1 {
+    font-size: 13px;
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content-text button {
+    font-size: 12px;
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content-text div {
+    width: 60px;
+    margin: auto;
+    background: #d9e8ff;
+    padding: 15px 0;
+    border-radius: 50%;
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content-text div i {
+    display: block;
+    text-align: center;
+    padding-left: 5px;
+    font-size: 25px;
+    color: #0066ff;
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content {
+    display: block;
+    margin-top: 150px;
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents {
+    width: 70%;
+    margin: 25px auto;
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents:nth-child(1) div {
+    top: 0;
+    -webkit-transform: translate(-50px, 0);
+            transform: translate(-50px, 0);
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents:nth-child(2) div {
+    right: 0;
+    top: 0;
+    -webkit-transform: translate(30px, 0);
+            transform: translate(30px, 0);
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents:nth-child(3) div {
+    right: 0;
+    bottom: 0;
+    -webkit-transform: translate(40px, 0);
+            transform: translate(40px, 0);
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents div h2 {
+    font-size: 10px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    color: #0066ff;
+  }
+  .dam-my-hobby .dam-my-hobby-group .dam-my-hobby-group-content .dam-my-hobby-group-contents div i {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-size: 15px;
+    margin-right: 5px;
+    color: #0066ff;
+  }
+  .dam-my-purpose .dam-my-purpose-content {
+    width: 80%;
+    margin: auto;
+  }
+  .dam-my-purpose .dam-my-purpose-content h1 {
+    font-size: 25px;
+  }
+  .dam-my-purpose .dam-my-purpose-content p {
+    font-size: 15px;
+  }
+  .dam-my-purpose .dam-my-purpose-content div i {
+    font-size: 25px;
+  }
+  .dam-footer {
+    padding: 20px 3%;
+  }
+  .dam-footer .dam-footer-content {
+    width: 80%;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .dam-footer .dam-footer-content div {
+    margin-bottom: 40px;
+  }
+  .dam-footer .dam-footer-content div h2 {
+    font-size: 12px;
+  }
+  .dam-footer .dam-footer-content div a, .dam-footer .dam-footer-content div p {
+    font-size: 12px;
+  }
+  .dam-footer .dam-footer-content div:nth-child(odd) {
+    margin-right: 20%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

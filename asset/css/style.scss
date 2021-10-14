@@ -1,0 +1,2395 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    &::-webkit-scrollbar-track {
+        background: #fff;        /* color of the tracking area */
+        }
+
+        &::-webkit-scrollbar {
+            width: 9px;               /* width of the entire scrollbar */
+            }
+           
+            &::-webkit-scrollbar-thumb {
+            background-color: rgba(177, 177, 177, 0.952);    /* color of the scroll thumb */
+            border-radius: 20px;       /* roundness of the scroll thumb */
+            /* creates padding around scroll thumb */
+            box-sizing: border-box;
+            }
+}
+
+// Navbar
+#dam-navbar-bye {
+    .dam-navbar-logo {
+        transition: .2s ease;
+        transform: translate(-100%,0);
+    }
+    // .dam-navbar-list a {
+    //     opacity: 0;
+    // }
+    
+}
+
+@keyframes navlogo {
+    0% {
+        opacity: 0;
+        transform: translate(-200px,0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+
+@keyframes navlist {
+    0% {
+        opacity: 0;
+        transform: translate(200px,0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+
+.dam-navbar {
+    // visibility: hidden;
+    transition: .2s ease;
+    z-index: 9999;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 96%;
+    padding: 0 2%;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 1.5fr 5fr;
+    grid-gap: 5%;
+    box-shadow: 0 0 5px 3px rgba(146, 146, 146, 0.212);
+
+    .dam-navbar-logo {
+        animation: .5s navlogo linear forwards;
+        opacity: 0;
+        transform: translate(-200px,0);
+        transition: .5s linear;
+        line-height: 80px;
+        color: rgb(62, 74, 110);
+        letter-spacing: 3px;
+        text-decoration: none;
+        cursor: pointer;
+
+        h1 {
+  
+            display: inline-block;
+        }
+
+        small {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+
+    .dam-navbar-list {
+        animation: .5s navlist linear forwards;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+        
+        a {
+            animation: 1s menuani linear forwards;
+            cursor: pointer;
+            position: relative;
+            width: 20%;
+            text-align: center;
+            display: inline-block;
+            padding-top: 5px;
+            text-decoration: none;
+            line-height: 80px;
+            font-size: 16px;
+            color: rgb(62, 74, 110);
+            font-weight: 400;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 25%;
+                left: 0;
+                width: 0%;
+                height: 2px;
+                background-color: rgb(62, 74, 110);
+            }
+
+            &:hover {
+                    transition: .5s ease;
+                    color: rgb(0, 102, 255);
+            }
+        }
+    }
+
+    // Animasi menu
+    .menulist {
+        &::before {
+            animation: .5s menulist linear forwards !important;
+        }
+    }
+
+    @keyframes menulist {
+        0% {
+            left: 0;
+            width: 0%;
+        }
+    
+        50% {
+            left: 50%;
+            width: 50%;
+        }
+    
+        100% {
+            left: 100%;
+            width: 0%;
+        }
+    }
+
+    .dam-navbar-phone {
+        display: none;
+    }
+}
+// End Navbar
+
+.dam-container {
+    transition: .0s linear;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.dam-every-section {
+    margin-bottom: 200px;
+}
+
+// Heading Profile
+.dam-heading-profile {
+    position: relative;
+    height: calc(100vh - 80px);
+
+    &::before {
+        opacity: 0;
+        content : '';
+        position: absolute;
+        width: 80%;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        bottom: 0;
+        height: calc(50vh - 50px);
+        background: rgb(246,199,255);
+        background: linear-gradient(12deg, rgba(246,199,255,1) 0%, rgba(147,174,255,0.4598214285714286) 53%, rgba(163,255,232,1) 100%);
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        background-size: cover;
+        background-position: center center;
+        z-index: -1;
+    }
+
+    .dam-heading-profile-content {
+        opacity: 0;
+        transform: scale(1.1);
+        position: relative;
+        padding: 40px;
+        text-align: center;
+        background-color: #fff;
+        width: 35%;
+        margin: auto;
+        box-shadow: 2px 2px 5px rgba(184, 184, 184, 0.493);
+
+        .dam-heading-profile-content-photo {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 0;    
+                transform: translate(-50%, 0) scale(1.15) rotate(90deg); 
+                width: 150px;
+                height: 140px;
+                border-radius: 50%;
+                background: rgb(10,102,195);
+                background: linear-gradient(90deg, rgba(10,102,195,1) 60%, rgb(195, 207, 218) 60%);
+                z-index: 1;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 0;    
+                transform: translate(-50%, 0);
+                width: 150px;
+                height: 140px;
+                border-radius: 50%;
+                background-color: #fff;
+                z-index: 2;
+            }
+
+            img {
+                z-index: 3;
+                width: 150px;
+                height: 140px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        h1 {
+            margin-top: 30px;
+            padding-bottom: 15px;
+            font-size: 30px;
+            color :rgb(39, 46, 68);
+            border-bottom: 3px solid rgba(62, 74, 110, 0.185);
+        }
+
+        .dam-heading-profile-content-skill-list {
+            display: flex;
+            justify-content: space-evenly;
+            h2 {
+                font-size: 17px;
+
+                i {
+                    color: rgb(0, 102, 255);
+                }
+            }
+        }
+
+        h3 {
+            display: block;
+            margin: 25px auto;
+            width: 80%;
+            border: 2px solid rgb(0, 102, 255);
+            border-radius: 10px;
+            padding: 8px 0;
+            color: rgb(0, 102, 255);
+            font-size: 15px;
+
+            i {
+                color: rgb(0, 102, 255);
+            }
+        }
+        
+        .dam-heading-profile-content-link {
+            margin-top: 50px;
+        }
+
+        div {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            a {
+                &:nth-child(1){
+                    background-color: #0068E5;
+                }
+
+                &:nth-child(2){
+                    background-color: #1AA2F8;
+                }
+
+                &:nth-child(3){
+                    background-color: #de2d70;
+                }
+
+                &:nth-child(4){
+                    background-color: #20CE40;
+                }
+
+                &:nth-child(5){
+                    background-color: #0A66C3;
+                }
+                
+                color: #fff;
+                width: 40px;
+                padding: 5px 7px;
+                border-radius: 50%;
+                text-decoration: none;
+                font-size: 25px;
+            }
+        }
+    }
+
+    .dam-heading-profile-content-ani {
+        opacity: 1;
+        transform: scale(1);
+        transition: 1s linear;
+    }
+
+    .dam-heading-profile-content-label {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        border-radius: 20px;
+        transform: translate(50%,0);
+        padding: 8px 5%;
+        box-shadow: 0px 0px 5px rgba(184, 184, 184, 0.493);
+        color: rgb(0, 102, 255);
+
+        h2 {
+            font-size: 15px;
+
+
+            i {
+                color: rgb(0, 102, 255);
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.dam-heading-profile-ani {
+    &::before {
+        transform: translate(-50%,0);
+        opacity: 1;
+        transition: 1s linear;
+    }
+}
+// End Heading Profile
+
+
+// Skill Classification
+.dam-skill-classification {
+    height: 100vh;
+
+    .dam-skill-classification-title {
+        opacity: 0;
+        transform: translate(0,-200px);
+        position: relative;
+        width: 30%;
+        margin: 5% auto;
+        text-align: center;
+        color: rgb(62, 74, 110);
+        padding-bottom: 12px;
+
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 6px;
+            border-radius: 20px;
+            background-color: rgb(62, 74, 110);
+        }
+    }
+
+    .dam-skill-classification-group {
+        position: relative;
+        max-width: 90%;
+        overflow: hidden;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 280px 280px;
+
+        .dam-skill-classification-team {   
+            opacity: 0;
+            position: relative;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 40px 20%;
+
+            &:nth-child(1){
+                transform: translate(-100px,0);
+            }
+
+            &:nth-child(2){
+                transform: translate(100px,0);
+            }
+
+            &:nth-child(3){
+                transform: translate(0,100px);
+            }
+
+            &:nth-child(4){
+                transform: translate(100px,0);
+            }
+
+            h1 {
+                margin: 15px 0;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            .dam-skill-classification-label {
+                position: absolute;
+                background-color: #fff;
+                z-index: 5;
+                padding: 10px 3%;
+                box-shadow: 0px 0px 5px rgba(184, 184, 184, 0.493);
+                color: rgb(0, 102, 255);
+                border-radius: 20px;
+                font-size: 9px;
+
+                i {
+                    font-size: 17px;
+                }
+            }
+
+            &:nth-child(1) .dam-skill-classification-label, &:nth-child(3) .dam-skill-classification-label {
+                top: 0%;
+                left: 0%;
+                transform: translate(20%,50%);
+            }
+
+            &:nth-child(2) .dam-skill-classification-label, &:nth-child(4) .dam-skill-classification-label {
+                top: 0%;
+                right: 0%;
+                transform: translate(-20%,50%);
+            }
+
+
+            &:nth-child(3){
+                border-right: 1px solid rgba(62, 74, 110, 0.37);
+            }
+
+            &:nth-child(1){
+                border-right: 1px solid rgba(62, 74, 110, 0.37);
+            }
+
+            &:nth-child(2){
+                border-bottom: 1px solid rgba(62, 74, 110, 0.37);
+            }
+
+            &:nth-child(1){
+                border-bottom: 1px solid rgba(62, 74, 110, 0.37);
+            }
+
+            &:nth-child(1) i, &:nth-child(4) i{
+               color: #0068E5;
+            }
+
+            &:nth-child(2) i, &:nth-child(3) i{
+               color: #1AA2F8;
+            }
+
+            i {
+                font-size: 50px;
+            }
+        }
+    }
+
+
+    // Animation Based On Skill Classification
+    .dam-skill-classification-title-ani {
+        opacity: 1;
+        transform: translate(0,0);
+        transition: 1s;
+    }
+
+    .dam-skill-classification-group-ani .dam-skill-classification-team {
+        opacity: 1;
+        transition: 1s;
+        &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+            transform: translate(0,0);
+        }
+    }
+}
+// End Skill Classification
+
+
+
+// Frequently Tools Used
+.dam-frequently-tools-used {
+    
+    .dam-frequently-tools-used-title {
+        opacity: 0;
+        transform: translate(0,-200px);
+        position: relative;
+        width: 30%;
+        margin: 5% auto;
+        text-align: center;
+        color: rgb(62, 74, 110);
+        padding-bottom: 12px;
+
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 6px;
+            border-radius: 20px;
+            background-color: rgb(62, 74, 110);
+        }
+    }
+
+    .dam-frequently-tools-used-groups {
+        position: relative;
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 10%;
+
+        .dam-frequently-tools-used-groups-content {
+            .dam-frequently-tools-used-group-ani {
+                opacity: 1;
+                transform: translate(0,0);
+                transition: 1s;
+            }
+        }
+        
+        .dam-frequently-tools-used-group {
+            height: calc(100vh - 80px);
+            position: relative;
+            opacity: 0;
+            transform: translate(-200px,0);
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 5%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 5px;
+                background-color: rgba(0, 102, 255, 0.137);
+            }
+
+
+            .dam-frequently-tools-used-group-link  {
+                position: relative;
+                margin-top: 40px;
+                height: 50px;
+                line-height: 45px;
+                padding: 0 3%;
+                font-size: 16px;
+                font-weight: bold;
+                outline: 0;
+                border:0 ;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                color: rgb(0, 102, 255);
+                background-color: rgb(240, 245, 252);
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    top: 0;
+                    left: 0;
+                    overflow: auto;
+                    width: 2px;
+                    background-color: rgb(0, 102, 255) ;
+                }
+
+                i {
+                    font-size: 8px;
+                    display: inline-block;
+                    margin-right: 3.5px;
+                    margin-left: 3.5px;
+                }
+
+            }
+
+            i {
+                font-size: 50px;
+                margin-bottom: 15px;
+            }
+
+            h1, i {
+                color: rgb(0, 102, 255);
+            }
+
+            h2 {
+                margin-bottom: 30px;
+                font-size: 40px;
+            }
+
+            p {
+                color: rgb(62, 74, 110);
+            }
+        }
+
+        .dam-frequently-tools-used-image {
+            .dam-frequently-tools-used-image-real {
+                transition: .15s ease;
+                opacity: 0;
+                transform: translate(-100px,-100px);
+                position: sticky;
+                top: 120px;
+                width: 100%;
+                box-shadow: 5px 5px 20px rgb(206, 206, 206);
+            }
+
+            .dam-frequently-tools-used-image-reveal {
+                opacity: 1;
+                transform: translate(0,0);
+            }
+        } 
+    }
+
+    // Animation Based On Skill Classification
+    .dam-frequently-tools-used-title-ani {
+        opacity: 1;
+        transform: translate(0,0);
+        transition: 1s;
+    }
+
+
+}
+
+
+// End Frequently Tools Used
+
+
+// My Works
+.dam-my-works {
+    background-color: rgb(0, 102, 255);
+    padding: 25px 0 50px 0;
+    color: #fff;
+    max-width: 100%;
+    overflow: hidden;
+  
+
+    .dam-my-works-title {
+        transform: translate(-100px,0);
+        opacity: 0;
+        position: relative;
+        width: 30%;
+        margin: 5% auto;
+        text-align: center;
+        padding-bottom: 12px;
+
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 6px;
+            border-radius: 20px;
+            background-color: #fff;
+        }
+    }
+
+    .dam-my-works-title-ani {
+        transform: translate(0,0);
+        opacity: 1;
+        transition: 1s;
+    }
+
+    .dam-my-works-group {
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        text-align: center;
+
+        .dam-my-works-groups {
+            opacity: 0;
+
+            &:nth-child(1){
+                transform: translate(-200px,0);
+            }
+
+            &:nth-child(2) {
+                transform: translate(200px,0);
+            }
+
+            &:nth-child(3) {
+                transform: translate(-200px,0);
+            }
+
+            &:nth-child(4) {
+                transform: translate(200px,0);
+            }
+
+            h1 {
+                margin-bottom: 40px;
+            }
+            
+            .dam-my-works-groups-a {
+                padding: 40px 5%;
+                border-radius: 10px;
+                background-color: #fff;
+                border-top: 10px solid rgb(209, 225, 248);
+                box-sizing: border-box;
+            }
+
+            margin-right: 10%;
+            margin-left: 10%;
+            margin-bottom: 150px;
+            color:rgb(0, 102, 255);
+
+            .dam-my-works-groups-content {
+
+
+                .dam-my-works-groups-content-img {
+                    img {
+                        width: 80%;
+                        height: auto;
+                        object-fit: cover;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .dam-my-works-groups-content-text {
+                    .dam-my-works-groups-content-text-rating {
+                        margin: 30px 0 15px 0;
+
+                        i {
+                            display: inline-block;
+                            margin: 0 5px;
+                            border-radius: 50%;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            font-size: 25px;
+                        }
+                    }
+
+                    h2 {
+                        color: rgb(0, 102, 255);
+                        background-color: rgb(240, 245, 252);
+                        display: block;
+                        text-align: center;
+                        padding: 5px 0;
+                        border-radius: 20px;
+                        width: 75%;
+                        font-size: 15px;
+                        margin: 10px auto;
+                    }
+
+                    b {
+                        color: rgb(62, 74, 110);
+                    }
+
+                    .full-circle {
+                        background: rgb(1,102,255);
+                        background: linear-gradient(90deg, rgba(1,102,255,1) 50%, rgba(1,102,255,1) 50%);
+                    }
+
+                    .half-circle {
+                        background: rgb(1,102,255);
+                        background: linear-gradient(90deg, rgba(1,102,255,1) 50%, rgba(217,232,255,1) 50%);
+                    }
+
+                    .zero-circle {
+                        background: rgb(217,232,255);
+                        background: linear-gradient(90deg, rgba(217,232,255,1) 50%, rgba(217,232,255,1) 50%);
+                    }
+                }
+            }
+        }
+
+        .dam-my-works-groups-ani {
+            &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+                transform: translate(0,0);
+            }
+
+            opacity: 1;
+            transition: 1s linear;
+        }
+    }
+}
+// End My Works
+
+
+
+// Relatable Hobbies
+.dam-my-hobby {
+    overflow: hidden;
+
+    .dam-my-hobby-title {
+        opacity: 0;
+        transform: translate(200px,0);
+        position: relative;
+        width: 30%;
+        margin: 5% auto;
+        text-align: center;
+        color: rgb(62, 74, 110);
+        padding-bottom: 12px;
+
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 6px;
+            border-radius: 20px;
+            background-color: rgb(62, 74, 110);
+        }
+    }
+
+    .dam-my-hobby-title-ani {
+        transition: 1s linear;
+        opacity: 1;
+        transform: translate(0,0);
+    }
+
+    .dam-my-hobby-group {
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-gap: 10%;
+
+        .dam-my-hobby-group-content-text {
+            opacity: 0;
+            transform: translate(0,-200px);
+
+            span {
+                color :rgb(0, 102, 255);
+            }
+
+            h1 {
+                line-height: 40px;
+                margin-top: 40px;
+                font-weight: bold;
+                font-size: 21px;
+                margin-bottom: 40px;
+                color: rgb(62, 74, 110);
+            }
+
+            button {
+                float: right;
+                position: relative;
+                width: 75%;
+                text-align: center;
+                height: 50px;
+                line-height: 45px;
+                padding: 0 3%;
+                font-size: 16px;
+                font-weight: bold;
+                outline: 0;
+                border:0 ;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                color: rgb(0, 102, 255);
+                background-color: rgb(240, 245, 252);
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    top: 0;
+                    right: 0;
+                    overflow: auto;
+                    width: 3px;
+                    background-color: rgb(0, 102, 255) ;
+                }
+            }
+            
+            div {
+                width: 100px;
+                margin: auto;
+                background: rgb(217,232,255);
+                padding: 20px 0;
+                border-radius: 50%;
+
+                i {
+                    display: block;
+                    text-align: center;
+                    padding-left: 7px;
+                    font-size: 50px;
+                    color:rgb(0, 102, 255);
+                }
+            }
+        }
+
+        .dam-my-hobby-group-content-text-ani {
+            opacity: 1;
+            transform: translate(0,0);
+            transition: 1s linear;
+        }
+
+        .dam-my-hobby-group-content {
+            opacity: 0;
+            transform: translate(200px,0);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            .dam-my-hobby-group-content-1 div{
+                display: grid;
+                grid-template-columns: 1fr 5fr;
+            }
+
+            .dam-my-hobby-group-contents {
+                width: 45%;
+                position: relative;
+
+                &:nth-child(1) div {
+                    top: 0;
+                    transform: translate(-50px, -25px);
+                }
+
+                &:nth-child(2) div {
+                    right: 0;
+                    top: 0;
+                    transform: translate(100px, 15px);
+                }
+
+                &:nth-child(3) div {
+                    right: 0;
+                    bottom: 0;
+                    transform: translate(100px, 15px);
+                }
+
+                div {
+
+                    position: absolute;
+                    width: 80%;
+                    z-index: 1;
+                    display: grid;
+                    grid-template-columns: 1fr 5fr;
+                    grid-gap: 3%;
+                    padding: 10px 5%;
+                    border-radius: 20px;
+                    box-shadow: 2px 2px 4px 2px rgba(230, 230, 230, 0.836);
+                    background-color: #fff;
+
+                    h2 {
+                        font-size: 15px;
+                        align-self: center;
+                        color:rgb(0, 102, 255);
+                    }
+
+                    i {
+                        justify-self: center;
+                        align-self: center;
+                        font-size: 20px;
+                        margin-right: 5px;
+                        color:rgb(0, 102, 255);
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .dam-my-hobby-group-content-ani {
+            opacity: 1;
+            transform: translate(0,0);
+            transition: 1s linear;
+        }
+    }
+}
+// End Relatable Hobbies
+
+
+
+// My Purpose
+.dam-my-purpose {
+    .dam-my-purpose-content {
+        opacity: 0;
+        transform: scale(1.15);
+        width: 50%;
+        margin: auto;
+        text-align: center;
+
+        h1 {
+            font-size: 50px;
+            color: rgb(62, 74, 110);
+        }
+
+        p {
+            font-size: 20px;
+            color: rgba(62, 74, 110, 0.616);
+            font-weight: bold;
+        }
+
+        div {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-evenly;
+
+            i {
+                color:rgb(0, 102, 255);
+                font-size: 50px;
+                width: 18%;
+            }
+        }
+    }
+
+    .dam-my-purpose-content-ani {
+        opacity: 1;
+        transform: scale(1);
+        transition: 1s linear;
+    }
+}
+// End My Purpose
+
+// Footer
+.dam-footer {
+    margin-top: 5%;
+    padding: 3% 3%;
+    background-color: rgba(62, 74, 110, 0.048);
+    
+    .dam-footer-content {
+        width: 90%;
+        text-align: center;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+    
+        div {
+            text-align: left;
+
+            h2 {
+                font-size: 15px;
+                color: rgb(62, 74, 110);
+                margin-bottom: 10px;
+            }
+
+            .mitsuketa {
+                display: grid;
+                grid-template-columns: 1fr 10fr;
+                grid-template-rows: 29px;
+
+                i,p {
+                    align-self: center;
+                }
+
+                i {
+                    font-size: 17px;
+                }
+            }
+
+            a,p {
+                font-size: 15px;
+                color: rgba(62, 74, 110, 0.856);
+                text-decoration: none;
+                padding: 10px 0;
+                display: block;
+            }
+
+            i {
+                width: 30px;
+                display: inline-block;
+            }
+        }
+    }
+}
+// End Footer
+
+
+
+
+// Responsive Medium And Big Laptop Device 
+@media(min-width: 1440px){
+// Heading Profile
+.dam-heading-profile {
+    max-width: 1440px;
+    margin: auto;
+}
+// Ending Heading Profile
+
+// Skill Classification
+.dam-skill-classification {
+    max-width: 1440px;
+    margin: auto;
+}
+// End Skill Classification
+
+// Frequently Tools Used
+.dam-frequently-tools-used {
+    max-width: 1440px;
+    margin: auto;
+
+    .dam-frequently-tools-used-groups {
+        .dam-frequently-tools-used-group {
+            height: calc(80vh - 80px);
+        }
+    }
+}
+// End Frequently Tools Used
+
+// My Works
+.dam-my-works {
+    max-width: 1440px;
+    margin: auto;
+}
+// End My Works
+
+
+    // Relatable Hobbies
+    .dam-my-hobby {
+        width: 1440px;
+        margin: auto;
+    }
+    // End Relatable Hobbies
+
+    // My Purpose
+    .dam-my-purpose {
+        max-width: 1440px;
+        margin: 200px auto;
+
+        .dam-my-purpose-content {
+            width: 80%;
+            margin: auto;
+
+            h1 {
+                font-size: 55px;
+            }
+
+            p {
+                font-size: 35px;
+            }
+
+            div {
+                i {
+                    font-size: 55px;
+                }
+            }
+        }
+    }
+    // End My Purpose
+
+    // Footer
+    .dam-footer {
+        margin: auto;
+        max-width: 1440px;
+        padding: 20px 3%;
+        
+        .dam-footer-content {
+            width: 90%;
+            grid-template-columns: repeat(5,1fr);
+        
+            div {
+    
+                h2 {
+                    font-size: 15px;
+                }
+    
+                a,p {
+                    font-size: 15px;
+                }
+    
+                margin-bottom: 20px;
+    
+                &:nth-child(odd){
+                    margin-right: 20%;
+                }
+    
+            }
+        }
+    }
+    // End Footer
+}
+
+// Responsive Semi Khusus Navbar
+@media(max-width: 1200px){
+     // Navbar
+     .dam-navbar {
+        width: 96%;
+        padding: 0 4%;
+        grid-template-columns: 1.5fr 5fr;
+
+        .dam-navbar-list {
+            a {
+                font-size: 13px;
+            }
+        }
+    }
+    // End Navbar
+}
+
+
+// Responsive Small Laptop Device 
+@media(max-width: 1024px){
+    // Navbar
+    .dam-navbar {
+        grid-template-columns: 2fr 1fr;
+
+        .dam-navbar-logo {
+            h1 {
+                font-size: 24px;
+            }
+
+            small {
+                font-size: 16px;
+            }
+        }
+
+        .dam-navbar-list {
+            display: none;
+        }
+
+        .dam-navbar-phone {
+            margin-right: 5%;
+            align-self: center;
+            justify-self: end;
+            display: block;
+
+            i {
+                color: rgb(62, 74, 110);
+                font-size: 30px;
+            }
+        }
+    }
+    // End Navbar
+
+    // Heading Profile
+    .dam-heading-profile {
+        position: relative;
+
+        &::before {
+            width: 90%;
+        }
+
+        .dam-heading-profile-content {
+            width: 35%;
+
+            .dam-heading-profile-content-photo {
+                &::before {
+                    width: 135px;
+                    height: 125px;
+                }
+
+                &::after {
+                    width: 135px;
+                }
+
+                img {
+                    width: 135px;
+                    height: 125px;
+                }
+            }
+
+            h1 {
+                margin-top: 30px;
+                padding-bottom: 15px;
+                font-size: 25px;
+            }
+
+            .dam-heading-profile-content-skill-list {
+                h2 {
+                    font-size: 14px;
+                }
+            }
+
+            h3 {
+                width: 90%;
+                padding: 8px 0;
+                font-size: 12px;
+            }
+            
+
+            div {
+                margin-top: 20px;
+                a {                
+                    width: 40px;
+                    padding: 7px 5px;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .dam-heading-profile-content-label {
+            padding: 8px 5%;
+
+            h2 {
+                font-size: 13px;
+
+                i {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    // End Heading Profile
+
+    // Skill Classification
+    .dam-skill-classification {
+        height: 100vh;
+
+        .dam-skill-classification-title {
+            position: relative;
+            width: 50%;
+            margin: 5% auto;
+            text-align: center;
+            color: rgb(62, 74, 110);
+            padding-bottom: 12px;
+
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 6px;
+                border-radius: 20px;
+                background-color: rgb(62, 74, 110);
+            }
+        }
+
+        .dam-skill-classification-group {
+            position: relative;
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 280px 280px;
+
+            .dam-skill-classification-team {
+                position: relative;
+                text-align: center;
+                box-sizing: border-box;
+                padding: 40px 20%;
+
+                h1 {
+                    margin: 15px 0;
+                }
+
+                p {
+                    font-size: 13px;
+                }
+
+                .dam-skill-classification-label {
+                    position: absolute;
+                    background-color: #fff;
+                    z-index: 5;
+                    padding: 10px 3%;
+                    box-shadow: 0px 0px 5px rgba(184, 184, 184, 0.493);
+                    color: rgb(0, 102, 255);
+                    border-radius: 20px;
+                    font-size: 8px;
+
+                    i {
+                        font-size: 14px;
+                    }
+                }
+
+                h1 {
+                    font-size: 20px;
+                }
+
+                i {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+    // End Skill Classification
+
+    // Frequently Tools Used
+    .dam-frequently-tools-used {
+        .dam-frequently-tools-used-title {
+            width: 50%;
+        }
+
+        .dam-frequently-tools-used-groups {
+            width: 80%;
+
+            .dam-frequently-tools-used-group {
+                .dam-frequently-tools-used-group-link  {
+                    position: relative;
+                    margin-top: 40px;
+                    height: 40px;
+                    line-height: 35px;
+                    padding: 0 5%;
+                    font-size: 14px;
+
+                    i {
+                        font-size: 8px;
+                    }
+
+                }
+
+                i {
+                    font-size: 40px;
+                    margin-bottom: 15px;
+                }
+
+                h2 {
+                    margin-bottom: 20px;
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+
+    }
+    // End Frequently Tools Used
+
+    // My Works
+    .dam-my-works {
+        .dam-my-works-title {
+            width: 50%;
+            margin: 5% auto;
+        }
+
+        .dam-my-works-group {
+            width: 90%;
+
+            .dam-my-works-groups {    
+                .dam-my-works-groups-a {
+                    padding: 30px 3%;
+                }
+
+                margin-right: 8%;
+                margin-left: 8%;
+
+                .dam-my-works-groups-content {
+                    .dam-my-works-groups-content-text {
+                        h2 {                      
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // End My Works
+
+    // Relatable Hobbies
+    .dam-my-hobby {
+        
+        .dam-my-hobby-title {
+            width: 40%;
+        }
+
+        .dam-my-hobby-group {
+            width: 80%;
+            padding-top: 50px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            grid-gap: 10%;
+
+            .dam-my-hobby-group-content-text {
+                h1 {
+                    font-size: 17px;
+                }
+
+                button {
+                    font-size: 14px;
+                }
+            }
+
+            .dam-my-hobby-group-content {
+
+                .dam-my-hobby-group-contents {
+                    &:nth-child(1) div {
+                        top: 0;
+                        transform: translate(-50px, -25px);
+                    }
+
+                    &:nth-child(2) div {
+                        right: 0;
+                        top: 0;
+                        transform: translate(30px, 15px);
+                    }
+
+                    &:nth-child(3) div {
+                        right: 0;
+                        bottom: 0;
+                        transform: translate(40px, 15px);
+                    }
+
+                    div {
+
+                        h2 {
+                            font-size: 12px;
+                            align-self: center;
+                            color:rgb(0, 102, 255);
+                        }
+
+                        i {
+                            justify-self: center;
+                            align-self: center;
+                            font-size: 17px;
+                            margin-right: 5px;
+                            color:rgb(0, 102, 255);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // End Relatable Hobbies
+
+    // My Purpose
+    .dam-my-purpose {
+        .dam-my-purpose-content {
+            width: 80%;
+            margin: auto;
+
+            h1 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 25px;
+            }
+
+            div {
+                i {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+    // End My Purpose
+
+
+    // Footer
+    .dam-footer {
+        padding: 20px 3%;
+        
+        .dam-footer-content {
+            width: 90%;
+            grid-template-columns: repeat(4,1fr);
+        
+            div {
+    
+                h2 {
+                    font-size: 14px;
+                }
+    
+                a,p {
+                    font-size: 14px;
+                }
+    
+                margin-bottom: 40px;
+    
+                &:nth-child(odd){
+                    margin-right: 20%;
+                }
+    
+            }
+        }
+    }
+    // End Footer
+}
+
+
+// Responsive Tablet 
+@media(max-width: 770px){
+    // Heading Profile
+    .dam-heading-profile {
+
+        &::before {
+            width: 94%;
+        }
+
+        .dam-heading-profile-content {
+            padding: 30px 40px;
+            width: 40%;
+
+            .dam-heading-profile-content-photo {
+                &::before {
+                    width: 120px;
+                    height: 110px;
+                }
+
+                &::after {
+                    width: 120px;
+                    height: 110px;
+                }
+
+                img {
+                    width: 120px;
+                    height: 110px;
+                }
+            }
+
+            h1 {
+                margin-top: 30px;
+                padding-bottom: 15px;
+                font-size: 20px;
+            }
+
+            .dam-heading-profile-content-skill-list {
+                h2 {
+                    font-size: 12px;
+                }
+            }
+
+            h3 {
+                margin: 20px auto;
+                width: 90%;
+                font-size: 11px;
+            }
+
+            div {
+                margin-top: 20px;
+
+                a {        
+                    width: 40px;
+                    padding: 7px 2px;
+                    font-size: 15px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        .dam-heading-profile-content-label {
+            padding: 8px 5%;
+
+            h2 {
+                font-size: 11px;
+
+                i {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    // End Heading Profile
+
+    // Skill Classification
+    .dam-skill-classification {
+        height: 100vh;
+
+        .dam-skill-classification-title {
+            position: relative;
+            width: 70%;
+            margin: 5% auto;
+            text-align: center;
+            color: rgb(62, 74, 110);
+            padding-bottom: 12px;
+
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 6px;
+                border-radius: 20px;
+                background-color: rgb(62, 74, 110);
+            }
+        }
+
+        .dam-skill-classification-group {
+            position: relative;
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 280px 280px;
+
+            .dam-skill-classification-team {
+                position: relative;
+                text-align: center;
+                box-sizing: border-box;
+                padding: 40px 20%;
+
+                h1 {
+                    margin: 15px 0;
+                }
+
+                p {
+                    font-size: 11px;
+                }
+
+                .dam-skill-classification-label {
+                    position: absolute;
+                    background-color: #fff;
+                    z-index: 5;
+                    padding: 10px 3%;
+                    box-shadow: 0px 0px 5px rgba(184, 184, 184, 0.493);
+                    color: rgb(0, 102, 255);
+                    border-radius: 20px;
+                    font-size: 7px;
+
+                    i {
+                        font-size: 13px;
+                    }
+                }
+
+                &:nth-child(1) .dam-skill-classification-label, &:nth-child(3) .dam-skill-classification-label {
+                    top: 0%;
+                    left: 0%;
+                    transform: translate(20%,15%);
+                }
+    
+                &:nth-child(2) .dam-skill-classification-label, &:nth-child(4) .dam-skill-classification-label {
+                    top: 0%;
+                    right: 0%;
+                    transform: translate(-20%,15%);
+                }
+
+                h1 {
+                    font-size: 17px;
+                }
+
+                i {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    // End Skill Classification
+
+    // Frequently Tools Used
+    .dam-frequently-tools-used {
+        .dam-frequently-tools-used-title {
+            width: 70%;
+        }
+
+        .dam-frequently-tools-used-groups {
+            width: 90%;
+            margin: 50px auto;
+
+            .dam-frequently-tools-used-group {
+                &::before {
+                    bottom: 15%;
+                }
+
+                .dam-frequently-tools-used-group-link  {
+                    padding: 0 5%;
+                    font-size: 12px;
+
+                    i {
+                        font-size: 6px;
+                    }
+
+                }
+
+                h2 {
+                    font-size: 17px;
+                }
+
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    // End Frequently Tools Used
+
+    // My Works
+    .dam-my-works {
+
+        .dam-my-works-title {
+            width: 60%;
+            margin: 5% auto;
+        }
+
+        .dam-my-works-group {
+            width: 96%;
+            margin: auto;
+
+            .dam-my-works-groups {
+                h1 {
+                    font-size: 20px;
+                    margin-bottom: 40px;
+                }
+                
+                .dam-my-works-groups-a {
+                    padding: 30px 3%;
+                }
+
+                margin-right: 5%;
+                margin-left: 5%;
+
+                .dam-my-works-groups-content {
+                    .dam-my-works-groups-content-text {
+                        .dam-my-works-groups-content-text-rating {
+                            i {
+                                font-size: 18px;
+                            }
+                        }
+
+                        h2 {
+                            font-size: 12px;
+                        }
+
+                        b {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // End My Works
+
+    // Relatable Hobbies
+    .dam-my-hobby {
+
+        .dam-my-hobby-title {
+            width: 50%;
+        }
+
+        .dam-my-hobby-group {
+            width: 90%;
+            padding-top: 50px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1.5fr;
+            grid-gap: 10%;
+
+            .dam-my-hobby-group-content-text {
+
+                h1 {
+                    font-size: 13px;
+                }
+
+                button {
+                    font-size: 12px;
+                }
+
+                div {
+                    width: 60px;
+                    margin: auto;
+                    background: rgb(217,232,255);
+                    padding: 15px 0;
+                    border-radius: 50%;
+
+                    i {
+                        display: block;
+                        text-align: center;
+                        padding-left: 5px;
+                        font-size: 25px;
+                        color:rgb(0, 102, 255);
+                    }
+                }
+            }
+
+            .dam-my-hobby-group-content {
+                display: block;
+
+                .dam-my-hobby-group-contents {
+                    &:nth-child(1) div {
+                        top: 0;
+                        transform: translate(-50px, -25px);
+                    }
+
+                    &:nth-child(2) div {
+                        right: 0;
+                        top: 0;
+                        transform: translate(30px, 15px);
+                    }
+
+                    &:nth-child(3) div {
+                        right: 0;
+                        bottom: 0;
+                        transform: translate(40px, 15px);
+                    }
+
+                    width: 70%;
+                    margin: auto;
+
+                    div {
+
+                        h2 {
+                            font-size: 10px;
+                            align-self: center;
+                            color:rgb(0, 102, 255);
+                        }
+
+                        i {
+                            justify-self: center;
+                            align-self: center;
+                            font-size: 15px;
+                            margin-right: 5px;
+                            color:rgb(0, 102, 255);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // End Relatable Hobbies
+
+    // My Purpose
+    .dam-my-purpose {
+        .dam-my-purpose-content {
+            width: 80%;
+            margin: auto;
+
+            h1 {
+                font-size: 35px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            div {
+                i {
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+    // End My Purpose
+
+
+    // Footer
+    .dam-footer {
+        padding: 20px 3%;
+        
+        .dam-footer-content {
+            width: 96%;
+            grid-template-columns: repeat(3,1fr);
+        
+            div {
+    
+                h2 {
+                    font-size: 14px;
+                }
+    
+                a,p {
+                    font-size: 14px;
+                }
+    
+                margin-bottom: 40px;
+    
+                &:nth-child(odd){
+                    margin-right: 20%;
+                }
+    
+            }
+        }
+    }
+    // End Footer
+}
+
+
+
+// Responsive Mobile 
+@media(max-width: 600px){
+    .dam-every-section {
+        margin-bottom: 100px;
+    }
+
+    // Heading Profile
+    .dam-heading-profile {
+
+        &::before {
+            width: 94%;
+            height: calc(50vh - 50px);
+        }
+
+        .dam-heading-profile-content {
+            padding: 30px 0px;
+            width: 70%;
+
+            .dam-heading-profile-content-photo {
+                &::before {
+                    left: 50%;
+                    width: 105px;
+                    height: 95px;
+                }
+
+                &::after {
+                    width: 105px;
+                    height: 95px;
+                }
+
+                img {
+                    width: 105px;
+                    height: 95px;
+                }
+            }
+
+            h1 {
+                margin-top: 30px;
+                padding-bottom: 15px;
+                font-size: 17px;            
+            }
+
+            .dam-heading-profile-content-skill-list {
+                h2 {
+                    font-size: 11px;
+                }
+            }
+
+            h3 {
+                margin: 20px auto;
+                width: 90%;
+                font-size: 11px;
+            }
+            
+
+            div {
+                margin-top: 20px;
+
+                a {            
+                    width: 40px;
+                    padding: 7px 2px;
+                    font-size: 15px;
+                    margin-bottom: 10px;
+                    margin-right: 2.5px;
+                    margin-left: 2.5px;
+                }
+            }
+        }
+
+        .dam-heading-profile-content-label {
+            padding: 8px 5%;
+
+            h2 {
+                font-size: 10px;
+            }
+        }
+    }
+    // End Heading Profile
+
+    // Skill Classification
+    .dam-skill-classification {
+        height: auto;
+
+        .dam-skill-classification-title {
+            position: relative;
+            width: 80%;
+            margin: 5% auto;
+            text-align: center;
+            color: rgb(62, 74, 110);
+            padding-bottom: 12px;
+
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 6px;
+                border-radius: 20px;
+                background-color: rgb(62, 74, 110);
+            }
+        }
+
+        .dam-skill-classification-group {
+            position: relative;
+            width: 90%;
+            margin: 35px auto;
+            display: block;
+
+            .dam-skill-classification-team {
+                position: relative;
+                text-align: center;
+                box-sizing: border-box;
+                padding: 40px 20%;
+
+                h1 {
+                    margin: 15px 0;
+                }
+
+                p {
+                    font-size: 11px;
+                }
+
+                .dam-skill-classification-label {
+                    position: absolute;
+                    background-color: #fff;
+                    z-index: 5;
+                    padding: 10px 3%;
+                    box-shadow: 0px 0px 5px rgba(184, 184, 184, 0.493);
+                    color: rgb(0, 102, 255);
+                    border-radius: 20px;
+                    font-size: 7px;
+
+                    i {
+                        font-size: 13px;
+                    }
+                }
+
+                &:nth-child(1) .dam-skill-classification-label, &:nth-child(3) .dam-skill-classification-label {
+                    top: 0%;
+                    left: 0%;
+                    transform: translate(20%,15%);
+                }
+
+                &:nth-child(2) .dam-skill-classification-label, &:nth-child(4) .dam-skill-classification-label {
+                    top: 0%;
+                    right: 0%;
+                    transform: translate(-20%,15%);
+                }
+
+                &:nth-child(3){
+                    border-right: none;
+                }
+    
+                &:nth-child(1){
+                    border-right: none;
+                }
+    
+                &:nth-child(2){
+                    border-bottom: none;
+                }
+    
+                &:nth-child(1){
+                    border-bottom: none;
+                }
+
+                h1 {
+                    font-size: 17px;
+                }
+
+                i {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    // End Skill Classification
+
+    // Frequently Tools Used
+    .dam-frequently-tools-used {
+        .dam-frequently-tools-used-title {
+            width: 80%;
+        }
+
+        .dam-frequently-tools-used-groups {
+            width: 90%;
+            grid-template-columns: 1.7fr 1.2fr;
+
+            .dam-frequently-tools-used-group {
+                padding-bottom: 75px;
+                height: calc(80vh - 80px);
+
+                &::before {
+                    display: none;
+                }
+
+                .dam-frequently-tools-used-group-link  {
+                    margin-top: 30px;
+                    height: 35px;
+                    line-height: 30px;
+                    padding: 0 10%;
+                    font-size: 10px;
+
+                    &::before {
+                        bottom: 0;
+                    }
+
+                    i {
+                        display: none;
+                    }
+                }
+
+                i {
+                    font-size: 25px;
+                    margin-bottom: 12px;
+                }
+
+                h1, i {
+                    font-size: 18px;
+                }
+
+                h2 {
+                    margin-bottom: 15px;
+                    font-size: 15px;
+                }
+
+                p {
+                    font-size: 10px;
+                }
+            }
+        }
+
+    }
+    // End Frequently Tools Used
+
+    // My Works
+    .dam-my-works {
+        .dam-my-works-title {
+            width: 80%;
+            margin: 5% auto;
+        }
+
+        .dam-my-works-group {
+            width: 90%;
+            margin: 50px auto;
+            display: block;
+
+            .dam-my-works-groups {
+                &:nth-child(2) {
+                    transform: translate(0,0);
+                }
+
+                &:nth-child(3) {
+                    transform: translate(0,0);
+                }
+
+                &:nth-child(4) {
+                    transform: translate(0,0);
+                }
+
+                margin-bottom: 50px;
+            }
+        }
+    }
+    // End My Works
+
+     // Relatable Hobbies
+     .dam-my-hobby {
+
+        .dam-my-hobby-title {
+            width: 60%;
+        }
+
+        .dam-my-hobby-group {
+            width: 90%;
+            padding-top: 25px;
+            margin: auto;
+            display: block;
+
+            .dam-my-hobby-group-content-text {
+
+                h1 {
+                    font-size: 13px;
+                }
+
+                button {
+                    font-size: 12px;
+                }
+
+                div {
+                    width: 60px;
+                    margin: auto;
+                    background: rgb(217,232,255);
+                    padding: 15px 0;
+                    border-radius: 50%;
+
+                    i {
+                        display: block;
+                        text-align: center;
+                        padding-left: 5px;
+                        font-size: 25px;
+                        color:rgb(0, 102, 255);
+                    }
+                }
+            }
+
+            .dam-my-hobby-group-content {
+                display: block;
+                margin-top: 150px;
+
+                .dam-my-hobby-group-contents {
+                    &:nth-child(1) div {
+                        top: 0;
+                        transform: translate(-50px, 0);
+                    }
+
+                    &:nth-child(2) div {
+                        right: 0;
+                        top: 0;
+                        transform: translate(30px, 0);
+                    }
+
+                    &:nth-child(3) div {
+                        right: 0;
+                        bottom: 0;
+                        transform: translate(40px, 0);
+                    }
+
+                    width: 70%;
+                    margin: 25px auto;
+
+                    div {
+
+                        h2 {
+                            font-size: 10px;
+                            align-self: center;
+                            color:rgb(0, 102, 255);
+                        }
+
+                        i {
+                            justify-self: center;
+                            align-self: center;
+                            font-size: 15px;
+                            margin-right: 5px;
+                            color:rgb(0, 102, 255);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // End Relatable Hobbies
+
+// My Purpose
+.dam-my-purpose {
+    .dam-my-purpose-content {
+        width: 80%;
+        margin: auto;
+
+        h1 {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+
+        div {
+            i {
+                font-size: 25px;
+            }
+        }
+    }
+}
+// End My Purpose
+
+// Footer
+.dam-footer {
+    padding: 20px 3%;
+    
+    .dam-footer-content {
+        width: 80%;
+        grid-template-columns: repeat(1,1fr);
+    
+        div {
+
+            h2 {
+                font-size: 12px;
+            }
+
+            a,p {
+                font-size: 12px;
+            }
+
+            margin-bottom: 40px;
+
+            &:nth-child(odd){
+                margin-right: 20%;
+            }
+
+        }
+    }
+}
+// End Footer
+}

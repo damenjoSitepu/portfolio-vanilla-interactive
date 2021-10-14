@@ -1,0 +1,389 @@
+<!-- Navbar -->
+    <div class="dam-navbar">
+        <div class="dam-navbar-logo">
+            <h1>Chamber</h1> <small>Bio</small>
+        </div>
+
+        <div class="dam-navbar-list">
+            <a href="">Skill Classification</a>
+            <a href="">Frequently Tools Used</a>
+            <a href="">My Best Works</a>
+            <a href="">Relatable Hobbies</a>
+            <a href="">Final Purpose</a>
+        </div>
+    </div>
+    <!-- End Navbar -->
+
+    <!-- All Content Stored Here -->
+    <div class="dam-container">
+
+        <!-- Heading Profile -->
+        <section class="dam-every-section dam-heading-profile">
+            <div class="dam-heading-profile-content">
+                <div class="dam-heading-profile-content-label">
+                    <h2><i class="fas fa-user"></i>&nbsp; About Me</h2>
+                </div>
+
+                <div class="dam-heading-profile-content-photo">
+                    <img src="asset/img/king.jpg" alt="">
+                </div>
+
+                <h1>Damenjo Sitepu</h1>
+                <div class="dam-heading-profile-content-skill-list">
+                    <h2><i class="fas fa-desktop"></i> Programming</h2>
+                    <h2>Design Graphic <i class="fas fa-palette"></i></h2>
+                </div>
+
+                <h3><i class="fas fa-key"></i> &nbsp; I Will Take Any Risk For My Future</h3>
+
+                <div class="dam-heading-profile-content-link">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-whatsapp"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- End Heading Profile -->
+
+
+
+        <!-- Skill Classification  -->
+        <section class="dam-every-section dam-skill-classification">
+
+            <h1 class="dam-skill-classification-title">Skill Classification</h1>
+
+            <div class="dam-skill-classification-group">
+                <div class="dam-skill-classification-team">
+                    <div class="dam-skill-classification-label">
+                        <h2><i class="fas fa-laptop"></i>&nbsp; Technologies</h2>
+                    </div>
+
+                    <i class="fas fa-desktop"></i>
+                    <h1>Programming</h1>
+                    <p>
+                        Programming is defined as the act of writing computer code.
+                    </p>
+                </div>
+
+                <div class="dam-skill-classification-team">
+                    <div class="dam-skill-classification-label">
+                        <h2><i class="fas fa-paint-brush"></i>&nbsp; Visual Art</h2>
+                    </div>
+
+                    <i class="fas fa-palette"></i>
+                    <h1>Design Graphic</h1>
+                    <p>
+                        Graphic design is a craft where professionals create visual content to communicate messages
+                    </p>
+                </div>
+
+                <div class="dam-skill-classification-team">
+                    <div class="dam-skill-classification-label">
+                        <h2><i class="fas fa-receipt"></i>&nbsp; Ecnonomy</h2>
+                    </div>
+
+                    <i class="fas fa-wallet"></i>
+                    <h1>Accounting</h1>
+                    <p>
+                        Accounting is the process of recording financial transactions pertaining to a business.
+                    </p>
+                </div>
+
+                <div class="dam-skill-classification-team">
+                    <div class="dam-skill-classification-label">
+                        <h2><i class="fas fa-language"></i>&nbsp; Additional Skill</h2>
+                    </div>
+
+                    <i class="fas fa-pen-alt"></i>
+                    <h1>Literation</h1>
+                    <p>
+                        A writer is a person who uses written words in different styles and techniques to communicate
+                        ideas.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- End Skill Classification -->
+
+
+
+        <!-- Frequently Tools Used -->
+        <section class="dam-every-section dam-frequently-tools-used">
+            <h1 class="dam-frequently-tools-used-title">Frequently Tools Used</h1>
+            <div class="dam-frequently-tools-used-groups">
+                <div class="dam-frequently-tools-used-groups-content">
+                    <div class="dam-frequently-tools-used-group dam-frequently-tools-used-group-1">
+                        <div>
+                            <i class="fas fa-desktop"></i>
+                            <div>
+                                <h1>Programming</h1>
+                                <h2>Visual Studio Code</h2>
+                            </div>
+                        </div>
+                        <p>Visual Studio Code is an integrated development environment made by Microsoft for
+                            Windows,
+                            Linux
+                            and
+                            macOS. Features include support for debugging, syntax highlighting, intelligent code
+                            completion,
+                            snippets, code refactoring, and embedded Git.</p>
+
+                        <button class="dam-frequently-tools-used-group-link">What Is Programming <i
+                                class="fas fa-circle"></i><i class="fas fa-circle"></i><i
+                                class="fas fa-circle"></i></button>
+                    </div>
+
+                    <div class="dam-frequently-tools-used-group dam-frequently-tools-used-group-2">
+                        <div>
+                            <i class="fas fa-palette"></i>
+                            <div>
+                                <h1>Design Graphic</h1>
+                                <h2>Adobe</h2>
+                            </div>
+                        </div>
+
+                        <p>Adobe Inc., originally called Adobe Systems Incorporated, is an American multinational
+                            computer
+                            software company.</p>
+
+                        <button class="dam-frequently-tools-used-group-link">What Is Design Graphic <i
+                                class="fas fa-circle"></i><i class="fas fa-circle"></i><i
+                                class="fas fa-circle"></i></button>
+                    </div>
+
+                    <div class="dam-frequently-tools-used-group dam-frequently-tools-used-group-3">
+                        <div>
+                            <i class="fas fa-wallet"></i>
+                            <div>
+                                <h1>Accounting</h1>
+                                <h2>Zahir Version 6.0</h2>
+                            </div>
+                        </div>
+
+                        <p>
+                            Zahir Accounting is the best online accounting software that has adopted modern
+                            web-based
+                            cloud
+                            computing technology.</p>
+
+                        <button class="dam-frequently-tools-used-group-link">What Is Accounting <i
+                                class="fas fa-circle"></i><i class="fas fa-circle"></i><i
+                                class="fas fa-circle"></i></button>
+                    </div>
+
+                    <div class="dam-frequently-tools-used-group dam-frequently-tools-used-group-4">
+                        <div>
+                            <i class="fas fa-pen-alt"></i>
+                            <div>
+                                <h1>Writer</h1>
+                                <h2>Celtx</h2>
+                            </div>
+                        </div>
+
+                        <p>Celtx is media pre-production software, designed for creating and organizing media
+                            projects
+                            like
+                            screenplays, films, videos, stageplays, documentaries, machinima, games, and podcasts.
+                        </p>
+
+                        <button class="dam-frequently-tools-used-group-link">What Is Writer <i
+                                class="fas fa-circle"></i><i class="fas fa-circle"></i><i
+                                class="fas fa-circle"></i></button>
+                    </div>
+                </div>
+
+                <div class="dam-frequently-tools-used-image">
+                    <img src="asset/img/vsc.png" class="dam-frequently-tools-used-image-real real-1" alt="">
+                    <img src="asset/img/adobe.jpg" class="dam-frequently-tools-used-image-real real-2" alt="">
+                    <img src="asset/img/zahir.png" class="dam-frequently-tools-used-image-real real-3" alt="">
+                    <img src="asset/img/celtx.jpg" class="dam-frequently-tools-used-image-real real-4" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- End Frequently Tools Used -->
+
+
+        <!-- My Works -->
+        <section class="dam-every-section dam-my-works">
+            <h1 class="dam-my-works-title">My Best Works</h1>
+
+            <div class="dam-my-works-group">
+                <div class="dam-my-works-groups">
+                    <div class="dam-my-works-groups-a">
+                        <h1><i class="fas fa-desktop"></i>&nbsp; Programming</h1>
+
+                        <div class="dam-my-works-groups-content">
+                            <div class="dam-my-works-groups-content-img">
+                                <img src="asset/img/program-1.png" alt="">
+                            </div>
+
+                            <div class="dam-my-works-groups-content-text">
+                                <h2>Web App Based On Ngasal</h2>
+
+                                <div class="dam-my-works-groups-content-text-rating">
+                                    <i class="fas fa-circle full-circle"></i>
+                                    <i class="fas fa-circle full-circle"></i>
+                                    <i class="fas fa-circle full-circle"></i>
+                                    <i class="fas fa-circle full-circle"></i>
+                                    <i class="fas fa-circle half-circle"></i>
+                                </div>
+
+                                <b>90% User Like This</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dam-my-works-groups">
+                    <div class="dam-my-works-groups-a">
+                        <h1><i class="fas fa-palette"></i>&nbsp; Design Graphic</h1>
+
+                        <div class="dam-my-works-groups-content">
+                            <div class="dam-my-works-groups-content-img">
+                                <img src="asset/img/obito.jpg" alt="">
+                            </div>
+
+                            <div class="dam-my-works-groups-content-text">
+                                <h2>Main Hero Uchiha Obito</h2>
+
+                                <div class="dam-my-works-groups-content-text-rating">
+                                    <i class="fas fa-circle full-circle"></i>
+                                    <i class="fas fa-circle full-circle"></i>
+                                    <i class="fas fa-circle full-circle"></i>
+                                    <i class="fas fa-circle half-circle"></i>
+                                    <i class="fas fa-circle zero-circle"></i>
+                                </div>
+
+                                <b>70% User Like This</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dam-my-works-groups">
+                    <div class="dam-my-works-groups-a">
+                        <h1><i class="fas fa-wallet"></i>&nbsp; Accounting</h1>
+
+                        <div class="dam-my-works-groups-content">
+                            <div class="dam-my-works-groups-content-img">
+                                <img src="asset/img/accounting.png" alt="">
+                            </div>
+
+                            <div class="dam-my-works-groups-content-text">
+                                <h2>Stock Card</h2>
+
+                                <div class="dam-my-works-groups-content-text-rating">
+                                    <i class="fas fa-circle full-circle"></i>
+                                    <i class="fas fa-circle full-circle"></i>
+                                    <i class="fas fa-circle full-circle"></i>
+                                    <i class="fas fa-circle zero-circle"></i>
+                                    <i class="fas fa-circle zero-circle"></i>
+                                </div>
+
+                                <b>60% User Like This</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dam-my-works-groups">
+                    <div class="dam-my-works-groups-a">
+                        <h1><i class="fas fa-pen-alt"></i>&nbsp; Writer</h1>
+
+                        <div class="dam-my-works-groups-content">
+                            <div class="dam-my-works-groups-content-img">
+                                <img src="asset/img/kamisamaninattahi.jpg" alt="">
+                            </div>
+
+                            <div class="dam-my-works-groups-content-text">
+                                <h2>Kamisama Ni Natta Hi</h2>
+
+                                <div class="dam-my-works-groups-content-text-rating">
+                                    <i class="fas fa-circle full-circle"></i>
+                                    <i class="fas fa-circle full-circle"></i>
+                                    <i class="fas fa-circle full-circle"></i>
+                                    <i class="fas fa-circle full-circle"></i>
+                                    <i class="fas fa-circle full-circle"></i>
+                                </div>
+
+                                <b>100% User Like This</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End My Works -->
+
+
+        <!-- My Hobby -->
+        <section class="dam-every-section dam-my-hobby">
+            <h1 class="dam-my-hobby-title">Relatable Hobbies</h1>
+
+            <div class="dam-my-hobby-group">
+                <div class="dam-my-hobby-group-content-text">
+                    <div>
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <h1>A few hobby that i like as long as i live, but if you want to know my <span>final
+                            destination</span>, click
+                        the link below</h1>
+
+                    <button>Visit Me Now!</button>
+                </div>
+
+                <div class="dam-my-hobby-group-content">
+                    <div class="dam-my-hobby-group-contents">
+                        <div>
+                            <i class="fas fa-gamepad"></i>
+                            <h2> I Like Playing Game</h2>
+                        </div>
+
+                        <img src="asset/img/game.png" alt="">
+                    </div>
+
+                    <div class="dam-my-hobby-group-contents">
+                        <div>
+                            <i class="fas fa-book"></i>
+                            <h2> Reading Book Is My Hobby Too</h2>
+                        </div>
+                        <img src="asset/img/read.png" alt="">
+                    </div>
+
+                    <div class="dam-my-hobby-group-contents">
+                        <div>
+                            <i class="fas fa-table-tennis"></i>
+                            <h2>I Deal For My Physic With Badminton</h2>
+                        </div>
+                        <img src="asset/img/badminton.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End My Hobby -->
+
+
+
+        <!-- My Purpose -->
+        <section class="dam-every-section dam-my-purpose">
+            <div class="dam-my-purpose-content">
+                <h1>What I Want To Achieve</h1>
+
+                <p>World Domination and declare new war againts suck governments</p>
+
+                <div>
+                    <i class="fas fa-globe-europe"></i>
+                    <i class="fas fa-globe-asia"></i>
+                    <i class="fas fa-globe"></i>
+                    <i class="fas fa-globe-americas"></i>
+                    <i class="fas fa-globe-africa"></i>
+                </div>
+            </div>
+        </section>
+        <!-- End My Purpose -->
+
+    </div>
+    <!-- End All Content Stored Here -->
